@@ -1,0 +1,46 @@
+<div class="tabs">
+        <#if contentSectionItem.contentCategoryItems.item??>
+                <#assign contentItems = contentSectionItem.contentCategoryItems.item />
+                <ul class="tab_nav">
+                <#list contentItems as contentSection>
+                        <#assign contentSectionItem = siteItemService.getSiteItem(contentSection.key) />
+                        <#assign contentSectionTemplate = contentSectionItem.contentTemplate.item />
+                        <#if siteItemService.getSiteItem(contentSectionTemplate.key)??>
+                                <#assign templateItem = siteItemService.getSiteItem(contentSectionTemplate.key) />
+                                <#assign tabName = contentSectionItem["internal-name"]/>
+                                <#if tabName?contains("java")>
+                                        <#assign displayTab = "Java"/>
+                                        <#assign selected = "selected" />
+                                <#elseif tabName?contains("ruby")>
+                                        <#assign displayTab = "Ruby"/>
+                                        <#assign selected = "" />
+                                <#elseif tabName?contains("php")>
+                                        <#assign displayTab = "PHP"/>
+                                        <#assign selected = "" />
+                                <#else>
+                                        <#assign displayTab = ""/>
+                                </#if>
+                                <li>
+                                  <a href="#${tabName}" class=${selected}><abbr>${displayTab}</abbr></a>
+                                </li>
+                        <#else>
+                                <#assign contentSectionItemName = contentSectionItem["internal-name"]/>
+                                <div class="content-error">There is an issue with the component: ${contentSectionItemName}</div>
+                        </#if>
+                </#list>
+                </ul>
+                <div class="tab_content">
+                <#list contentItems as contentSection>
+                    <#assign contentSectionItem = siteItemService.getSiteItem(contentSection.key) />
+                    <#assign contentSectionTemplate = contentSectionItem.contentTemplate.item />
+                    <#if siteItemService.getSiteItem(contentSectionTemplate.key)??>
+                        <#assign templateItem = siteItemService.getSiteItem(contentSectionTemplate.key) />
+                        <#assign tabName = contentSectionItem["internal-name"]/>
+                                <div id="${tabName}" class="code">
+                                    <#include templateItem.templatePath!'' />
+                                </div>
+                    </#if>
+                </#list>
+              </div>
+        </#if>
+</div>

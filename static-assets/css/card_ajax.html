@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Twitter</title>
+	<style>
+	body { width: 600px; margin: auto; }
+	ul { list-style: none; }
+	li { padding-bottom: 1em; }
+	img { float: left; padding-right: 1em; }
+	a { text-decoration: none; color: #333; }
+	</style>
+</head>
+<body>
+	hi
+
+<ul id="card-container">
+	<script id="card-template" type="text/x-handlebars-template">
+		{{#each this}}
+		<li>
+			<img src="{{thumb}}" alt="{{author}}">
+			<p><a href="{{url}}">{{CardId}}testing!</a></p>
+		</li>
+		{{/each}}
+	</script>		
+</ul>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>
+
+<script>
+
+(function() {
+	var Cards = {
+		init: function( config ) {
+
+			console.log('here');
+			this.url = 'http://livecard.azurewebsites.net/api/card?'+config.CardId+'&callback=?';
+			this.template = config.template;
+			this.container = config.container;
+			alert(this.fetch());
+			console.log(this.fetch());
+		},
+
+		attachTemplate: function() {
+			var template = Handlebars.compile( this.template );
+
+			this.container.append( template( this.cards ) );
+
+		},
+
+		fetch: function() {
+			console.log('here');
+			var self = this;
+
+			$.getJSON( this.url, function( data ) {
+				self.cards = $.map( data.results, function( card ) {
+					return {
+						CardId: card.CardId,
+						Title: card.Title,
+						Description: card.Description,
+						Hashtags: card.Hashtags,
+						Color: card.Color,
+						NumberOfNotifications: card.NumberOfNotifications,
+						CoverImages: card.CoverImages
+						
+					};
+				});
+
+				// For future lessons, research $.deferred, viewers. :)
+				self.attachTemplate(); 
+			});
+		}
+	};
+
+	Cards.init({
+		CardId:'84944413-265f-4711-8469-a7423a4564c6',
+		template: $('#card-template').html(),
+		container: $('#card-container'),
+	});
+
+})();
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

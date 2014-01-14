@@ -1,0 +1,403 @@
+#att-footer {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 55px 0;
+}
+#att-footer .footer-top, #att-footer .footer-bottom {
+}
+#att-footer .footer-top:before, #att-footer .footer-bottom:before, #att-footer .footer-top:after, #att-footer .footer-bottom:after {
+    content: "";
+    display: table;
+}
+#att-footer .footer-top:after, #att-footer .footer-bottom:after {
+    clear: both;
+}
+#att-footer .footer-top {
+    padding-bottom: 40px;
+}
+#att-footer section.platform {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 3px 3px 3px 3px;
+    color: #666666;
+    float: right;
+    min-height: 0;
+    padding: 12px 13px;
+    width: 281px;
+}
+#att-footer section.platform .healthy {
+    font-family: clearviewattregular,'helvetica neue',helvetica,sans-serif;
+}
+#att-footer section.platform .healthy em {
+    font-family: clearviewattitalic,'helvetica neue',helvetica,sans-serif;
+}
+#att-footer section.platform .healthy p {
+    display: inline-block;
+    font-family: clearviewattregular,'helvetica neue',helvetica,sans-serif;
+    font-size: 1em;
+    line-height: 15px;
+    width: 147px;
+}
+#att-footer section.platform .healthy p em {
+    font-family: clearviewattitalic,'helvetica neue',helvetica,sans-serif;
+}
+#att-footer section.platform .healthy strong {
+    color: #6EBB1F;
+    display: block;
+    font-family: clearviewatt_ltbold,'helvetica neue',helvetica,sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#att-footer section.platform .healthy strong em {
+    font-family: clearviewatt_ltbold_italic,'helvetica neue',helvetica,sans-serif;
+}
+#att-footer section.platform .healthy .icon {
+    background: url("/static-assets/images/check-icon.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 28px;
+    margin: 3px 8px 0 0;
+    width: 28px;
+}
+#att-footer section.platform .button {
+    background-color: #B7B7B7;
+    background-image: -moz-linear-gradient(center top , #BBBBBB, #B0B0B0);
+    background-repeat: repeat-x;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 -1px 0 #959595 inset;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: clearviewatt_ltbold,'helvetica neue',helvetica,sans-serif;
+    font-size: 1em;
+    line-height: 16px;
+    margin: 1px 0 0 12px;
+    padding: 6px 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    vertical-align: top;
+    width: 79px;
+}
+#att-footer section.platform .button:hover, #att-footer section.platform .button:active, #att-footer section.platform .button.active, #att-footer section.platform .button.disabled, #att-footer section.platform .button[disabled] {
+    background-color: #B0B0B0;
+}
+#att-footer section.platform .button:active, #att-footer section.platform .button.active {
+}
+#att-footer section.platform .button:hover, #att-footer section.platform .button:active {
+    background: none repeat scroll 0 0 #ABABAB;
+}
+#att-footer section.platform .button em {
+    font-family: clearviewatt_ltbold_italic,'helvetica neue',helvetica,sans-serif;
+}
+#att-footer section.social-media-links {
+    float: right;
+    padding: 14px 0;
+}
+#att-footer section.social-media-links ul {
+}
+#att-footer section.social-media-links ul:before, #att-footer section.social-media-links ul:after {
+    content: "";
+    display: table;
+}
+#att-footer section.social-media-links ul:after {
+    clear: both;
+}
+#att-footer section.social-media-links li {
+    border: 1px solid #E7E7E7;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    font-family: 'helvetica neue',helvetica,arial,sans-serif;
+    margin-right: 9px;
+}
+#att-footer section.social-media-links li em {
+    font-style: italic;
+}
+#att-footer section.social-media-links li:last-child {
+    margin-right: 0;
+}
+#att-footer section.social-media-links li a {
+    color: #4B5C66;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    height: 19px;
+    line-height: 20px;
+    padding: 5px;
+    vertical-align: top;
+    width: 85px;
+}
+#att-footer section.social-media-links li span.icon {
+    background: url("/static-assets/images/social-icons.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 19px;
+    margin-right: 7px;
+    width: 19px;
+}
+#att-footer section.social-media-links li.facebook .icon {
+    background-position: 0 0;
+}
+#att-footer section.social-media-links li.twitter .icon {
+    background-position: -19px 0;
+}
+#att-footer section.social-media-links li.github .icon {
+    background-position: -38px 0;
+}
+#att-footer section.social-media-links li:hover {
+    background: none repeat scroll 0 0 #F0F8FF;
+    border-color: #C9E6FF;
+}
+#att-footer p {
+    font-size: 0.78em;
+    margin: 0;
+}
+#att-footer .att-logo {
+    float: left;
+    height: 30px;
+    margin: 0 0 0 5px;
+    width: 30px;
+}
+#att-footer .att-logo img {
+    width: 100%;
+}
+#att-footer #links, #att-footer #trademark-notes {
+    border-left: 1px solid #ECECEC;
+    float: left;
+    padding-left: 30px;
+}
+#att-footer #links {
+    margin: 0 30px 0 0;
+    width: 331px;
+}
+#att-footer #links nav, #att-footer #links p {
+    font-size: 0.92em;
+    margin: 0;
+}
+#att-footer #links a {
+    color: #4B5C66;
+}
+#att-footer #links nav a {
+    color: #009ADD;
+    line-height: 0.92em;
+    margin-right: 10px;
+}
+#att-footer #links nav a.last {
+    margin-right: 0;
+}
+#att-footer #trademark-notes {
+    margin-left: 0;
+    width: 472px;
+}
+#att-footer #trademark-notes p {
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+}
+#sitemap {
+    float: left;
+}
+#sitemap:before, #sitemap:after {
+    content: "";
+    display: table;
+}
+#sitemap:after {
+    clear: both;
+}
+#sitemap section {
+    border-left: 1px solid #ECECEC;
+    float: left;
+    margin-right: 40px;
+    padding-left: 30px;
+}
+#sitemap section.apis {
+    width: 140px;
+}
+#sitemap section.resources {
+    width: 175px;
+}
+#sitemap section.support {
+    width: 110px;
+}
+#sitemap section:last-child {
+    margin-right: 0;
+}
+#sitemap section header {
+    color: #404040;
+    font-family: clearviewatt_ltbold,'helvetica neue',helvetica,sans-serif;
+    margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: normal;
+    text-transform: uppercase;
+	padding-bottom: 0px;
+}
+#sitemap section header em {
+    font-family: clearviewatt_ltbold_italic,'helvetica neue',helvetica,sans-serif;
+}
+#sitemap section header abbr {
+    text-transform: none;
+}
+#sitemap section ul {
+    margin: 0;
+}
+#sitemap section ul li {
+    margin-bottom: 2px;
+}
+#sitemap section ul li a {
+    color: #4B5C66;
+    font-size: 0.92em;
+    line-height: 1.75em;
+}
+#sitemap section ul li a:hover {
+    color: #1C92CA;
+}
+#sitemap section ul.social-media li {
+    display: inline-block;
+    margin-top: 15px;
+}
+#sitemap section ul.social-media .fb-icon, #sitemap section ul.social-media .tw-icon, #sitemap section ul.social-media .github-icon {
+    background: url("/static-assets/images/social-icons.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 19px;
+    text-indent: -9999px;
+    width: 19px;
+}
+#sitemap section ul.social-media .fb-icon:hover, #sitemap section ul.social-media .tw-icon:hover, #sitemap section ul.social-media .github-icon:hover {
+    opacity: 0.8;
+}
+#sitemap section ul.social-media .tw-icon {
+    background-position: -19px 0;
+}
+#sitemap section ul.social-media .github-icon {
+    background-position: -38px 0;
+}
+
+.mobile-only {
+	display: none;
+}
+#footer-common #sitemap section.apis,
+#footer-common #sitemap section.resources,
+#footer-common #sitemap section.support {
+	border-bottom:0;
+}	
+#footer-common #sitemap section.apis {
+	border-left:0;
+}
+#footer-common #sitemap section.apis header, #footer-common #sitemap section.site header,#footer-common  section.social-media-links.desktop-only {
+	border-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+	.mobile-only {
+		display: block;
+	}
+	.desktop-only {
+		display: none;
+	}
+	#footer-common {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#att-footer {
+		width: 100%;	
+	}
+	#sitemap {
+		width: 100%;
+		clear: both;
+		float: none;
+	}
+	#footer-common #sitemap section.apis,
+	#footer-common #sitemap section.resources,
+	#footer-common #sitemap section.support {
+		margin:0;
+		border: 0;
+		padding: 0;
+	}	
+	#footer-common #sitemap section.apis ul li a,
+	#footer-common #sitemap section.resources ul li a,
+	#footer-common #sitemap section.support ul li a{
+		font-size: 12px;
+	}
+	#footer-common #sitemap section.apis header,
+	#footer-common #sitemap section.resources header,
+	#footer-common #sitemap section.support  header{
+		margin:0;
+		border: 0;
+		padding: 0 0 10px 0;
+		font-size: 13px;
+	}
+	#footer-common #sitemap section.apis {
+		padding-left: 5%;
+		padding-right: 2.5%;
+		width: 25%;
+	}
+	#footer-common #sitemap section.resources {
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width: 34%;
+		border-left: solid 1px #dedede;
+	}
+	#footer-common #sitemap section.support {
+		padding-left: 2.5%;
+		padding-right: 5%;
+		width: 20%;
+		border-left: solid 1px #dedede;
+	}
+	#att-footer section.social-media-links.mobile-only {
+		border-bottom: solid 0;
+		clear: both;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#att-footer section.social-media-links.mobile-only ul{
+		margin-bottom: 30px;
+	}
+	#att-footer section.social-media-links.mobile-only .facebook {
+		width: 42%;
+		margin: 0 2.5% 0 5%;
+	}
+	#att-footer section.social-media-links.mobile-only .twitter {
+		width: 42%;
+		margin: 0 5% 0 2.5%;
+	}
+	#att-footer #links {
+		width: auto;
+	}
+	#footer-common .footer-bottom {
+		margin: 0 auto;
+		width: 383px;
+	}
+	#att-footer #trademark-notes.mobile-only {
+		margin: 30px 0;
+		width: 100%;
+		padding-left: 0 ;
+		border-left: 0;
+	}	
+	#att-footer #links nav, #att-footer #links p {
+		font-size: 11px;
+		margin: 0;
+	}
+	#att-footer #trademark-notes p {
+		margin: 0 auto;
+		width: 447px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	#att-footer #trademark-notes p {
+		font-size: 9px;
+		width: 350px;
+	}
+	#att-footer section.social-media-links.mobile-only .facebook,
+	#att-footer section.social-media-links.mobile-only .twitter {
+		width: 40%;
+	}
+
+}
+@media only screen and (max-width: 320px) {
+	#att-footer #trademark-notes p {
+		font-size: 7px;
+		width: 300px;
+	}
+
+}

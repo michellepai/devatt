@@ -1,0 +1,225 @@
+<section id="quickstart" class="level-1">
+    <header>4. Quickstart</header>
+
+    <div class="tabs">
+        <ul class="tab_nav">
+            <li>
+                <a href="#java" class="selected">Java</a>
+            </li>
+            <li>
+                <a href="#ruby">Ruby</a>
+            </li>
+            <li>
+                <a href="#php">PHP</a>
+            </li>
+        </ul>
+        <div id="java">
+            <section id="java_speech">
+                <pre class="codeElement">
+<span class="LineNr"> 1 </span><span class="PreProc">package</span> com.att.example;
+<span class="LineNr"> 2 </span>
+<span class="LineNr"> 3 </span><span class="Comment">// Import the relevant code kit parts</span>
+<span class="LineNr"> 4 </span><span class="PreProc">import</span> java.io.File;
+<span class="LineNr"> 5 </span>
+<span class="LineNr"> 6 </span><span class="PreProc">import</span> com.att.api.speech.model.SpeechResponse;
+<span class="LineNr"> 7 </span><span class="PreProc">import</span> com.att.api.speech.service.SpeechService;
+<span class="LineNr"> 8 </span><span class="PreProc">import</span> com.att.api.oauth.OAuthService;
+<span class="LineNr"> 9 </span><span class="PreProc">import</span> com.att.api.oauth.OAuthToken;
+<span class="LineNr">10 </span><span class="PreProc">import</span> com.att.api.rest.RESTException;
+<span class="LineNr">11 </span>
+<span class="LineNr">12 </span><span class="Type">public</span> <span class="Type">class</span> App {
+<span class="LineNr">13 </span>
+<span class="LineNr">14 </span>    <span class="Type">private</span> <span class="Type">static</span> <span class="Type">void</span> setProxySettings() {
+<span class="LineNr">15 </span>        <span class="Comment">// set any proxy settings</span>
+<span class="LineNr">16 </span>        <span class="Comment">//RESTConfig.setDefaultProxy("proxy.host", 8080);</span>
+<span class="LineNr">17 </span>    }
+<span class="LineNr">18 </span>
+<span class="LineNr">19 </span>    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
+<span class="LineNr">20 </span>        <span class="Statement">try</span> {
+<span class="LineNr">21 </span>            setProxySettings();
+<span class="LineNr">22 </span>
+<span class="LineNr">23 </span>            <span class="Comment">// Use the app settings from developer.att.com for the following</span>
+<span class="LineNr">24 </span>            <span class="Comment">// values. Make sure Speech is enabled for the app key/secret.</span>
+<span class="LineNr">25 </span>
+<span class="LineNr">26 </span>            <span class="Type">final</span> String fqdn = <span class="Constant">"<a href="https://api.att.com">https://api.att.com</a>"</span>;
+<span class="LineNr">27 </span>
+<span class="LineNr">28 </span>            <span class="Comment">// Enter the value from 'App Key' field</span>
+<span class="LineNr">29 </span>            <span class="Type">final</span> String clientId = <span class="Constant">"ENTER VALUE!"</span>;
+<span class="LineNr">30 </span>
+<span class="LineNr">31 </span>            <span class="Comment">// Enter the value from 'Secret' field</span>
+<span class="LineNr">32 </span>            <span class="Type">final</span> String clientSecret = <span class="Constant">"ENTER VALUE!"</span>;
+<span class="LineNr">33 </span>
+<span class="LineNr">34 </span>            <span class="Comment">// Create service for requesting an OAuth token</span>
+<span class="LineNr">35 </span>            OAuthService osrvc = new OAuthService(fqdn, clientId, clientSecret);
+<span class="LineNr">36 </span>
+<span class="LineNr">37 </span>            <span class="Comment">// Get OAuth token using the Speech scope</span>
+<span class="LineNr">38 </span>            OAuthToken token = osrvc.getToken(<span class="Constant">"SPEECH"</span>);
+<span class="LineNr">39 </span>
+<span class="LineNr">40 </span>            <span class="Comment">// Create service for interacting with the Speech api</span>
+<span class="LineNr">41 </span>            SpeechService speechSrvc = new SpeechService(fqdn, token);
+<span class="LineNr">42 </span>
+<span class="LineNr">43 </span>            <span class="Comment">// Set this to a single channel audio file</span>
+<span class="LineNr">44 </span>            <span class="Type">final</span> File AUDIO_FILE = <span class="Constant">null</span>;
+<span class="LineNr">45 </span>
+<span class="LineNr">46 </span>            <span class="Type">final</span> String context = <span class="Constant">""</span>;
+<span class="LineNr">47 </span>            <span class="Type">final</span> String subcontext = <span class="Constant">""</span>;
+<span class="LineNr">48 </span>            <span class="Type">final</span> String xarg = <span class="Constant">""</span>;
+<span class="LineNr">49 </span>
+<span class="LineNr">50 </span>            <span class="Type">final</span> SpeechResponse response
+<span class="LineNr">51 </span>                = speechSrvc.sendRequest(AUDIO_FILE, xarg, context, subcontext);
+<span class="LineNr">52 </span>
+<span class="LineNr">53 </span>            <span class="Comment">// display our results</span>
+<span class="LineNr">54 </span>            <span class="Statement">for</span> (String[] kvp : response.getResult()) {
+<span class="LineNr">55 </span>                System.out.println(kvp[<span class="Constant">0</span>] + <span class="Constant">": "</span> + kvp[<span class="Constant">1</span>]);
+<span class="LineNr">56 </span>            }
+<span class="LineNr">57 </span>        } <span class="Statement">catch</span> (Exception re) {
+<span class="LineNr">58 </span>            <span class="Comment">// handle exceptions here</span>
+<span class="LineNr">59 </span>            re.printStackTrace();
+<span class="LineNr">60 </span>        } <span class="Statement">finally</span> {
+<span class="LineNr">61 </span>            <span class="Comment">// perform any clean up here</span>
+<span class="LineNr">62 </span>        }
+<span class="LineNr">63 </span>    }
+<span class="LineNr">64 </span>}
+                </pre>
+
+            </section>
+
+        </div>
+
+        <div id="ruby">
+
+            <section id="ruby_speech">
+                <pre class="codeElement">
+<span class="LineNr"> 1 </span><span class="PreProc">#!/usr/bin/env ruby</span>
+<span class="LineNr"> 2 </span>
+<span class="LineNr"> 3 </span><span class="Comment"># Make sure the att-codekit has been installed then require the class</span>
+<span class="LineNr"> 4 </span><span class="PreProc">require</span> <span class="Special">'</span><span class="Constant">att/codekit</span><span class="Special">'</span>
+<span class="LineNr"> 5 </span>
+<span class="LineNr"> 6 </span><span class="Comment"># Include the name spaces to reduce the code required (Optional)</span>
+<span class="LineNr"> 7 </span><span class="PreProc">include</span> <span class="Type">Att</span>::<span class="Type">Codekit</span>
+<span class="LineNr"> 8 </span>
+<span class="LineNr"> 9 </span><span class="Comment"># Uncomment to set a proxy if required</span>
+<span class="LineNr">10 </span><span class="Comment"># Transport.proxy("http:/proxyaddress.com:port")</span>
+<span class="LineNr">11 </span>
+<span class="LineNr">12 </span><span class="Comment"># Use the app settings from developer.att.com for the following values.</span>
+<span class="LineNr">13 </span><span class="Comment"># Make sure SPEECH is enabled for the app key/secret.</span>
+<span class="LineNr">14 </span>
+<span class="LineNr">15 </span><span class="Comment"># Enter the value from 'App Key' field</span>
+<span class="LineNr">16 </span>client_id = <span class="Special">'</span><span class="Constant">ENTER VALUE!</span><span class="Special">'</span>
+<span class="LineNr">17 </span>
+<span class="LineNr">18 </span><span class="Comment"># Enter the value from 'Secret' field</span>
+<span class="LineNr">19 </span>client_secret = <span class="Special">'</span><span class="Constant">ENTER VALUE!</span><span class="Special">'</span>
+<span class="LineNr">20 </span>
+<span class="LineNr">21 </span><span class="Comment"># Set the fqdn to default of <a href="https://api.att.com">https://api.att.com</a></span>
+<span class="LineNr">22 </span>fqdn = <span class="Special">'</span><span class="Constant"><a href="https://api.att.com">https://api.att.com</a></span><span class="Special">'</span>
+<span class="LineNr">23 </span>
+<span class="LineNr">24 </span><span class="Comment"># Create service for requesting an OAuth token</span>
+<span class="LineNr">25 </span>clientcred = <span class="Type">Auth</span>::<span class="Type">ClientCred</span>.new(fqdn,
+<span class="LineNr">26 </span>                                  client_id,
+<span class="LineNr">27 </span>                                  client_secret)
+<span class="LineNr">28 </span>
+<span class="LineNr">29 </span><span class="Comment"># Get OAuth token using the SPEECH scope</span>
+<span class="LineNr">30 </span>token = clientcred.createToken(<span class="Special">'</span><span class="Constant">SPEECH</span><span class="Special">'</span>)
+<span class="LineNr">31 </span>
+<span class="LineNr">32 </span><span class="Comment"># Add an audio file to convert to text</span>
+<span class="LineNr">33 </span><span class="Type">AUDIO</span> = <span class="Special">"</span><span class="Constant">/path/to/audio/file</span><span class="Special">"</span>
+<span class="LineNr">34 </span>
+<span class="LineNr">35 </span><span class="Comment"># Create service for interacting with the SPEECH api</span>
+<span class="LineNr">36 </span>speech = <span class="Type">Service</span>::<span class="Type">SpeechService</span>.new(fqdn, token)
+<span class="LineNr">37 </span>
+<span class="LineNr">38 </span><span class="Comment"># Use exception handling to see if anything went wrong with the request</span>
+<span class="LineNr">39 </span><span class="Statement">begin</span>
+<span class="LineNr">40 </span>
+<span class="LineNr">41 </span>  <span class="Comment"># Send a message to the addresses specified</span>
+<span class="LineNr">42 </span>  response = speech.toText(<span class="Type">AUDIO</span>)
+<span class="LineNr">43 </span>
+<span class="LineNr">44 </span><span class="Statement">rescue</span> <span class="Type">Service</span>::<span class="Type">ServiceException</span> => e
+<span class="LineNr">45 </span>
+<span class="LineNr">46 </span>  <span class="Comment"># There was an error in execution print what happened</span>
+<span class="LineNr">47 </span>  puts <span class="Special">"</span><span class="Constant">There was an error, the api returned the following error code:</span><span class="Special">"</span>
+<span class="LineNr">48 </span>  puts <span class="Special">"</span><span class="Special"># {</span>e.message<span class="Special">}</span><span class="Special">"</span>
+<span class="LineNr">49 </span>
+<span class="LineNr">50 </span><span class="Statement">else</span>
+<span class="LineNr">51 </span>
+<span class="LineNr">52 </span>  <span class="Comment"># Simple dump of all the data returned</span>
+<span class="LineNr">53 </span>  puts <span class="Special">"</span><span class="Constant">Converted Speech with status response: </span><span class="Special"># {</span>response.status<span class="Special">}</span><span class="Special">"</span>
+<span class="LineNr">54 </span>  puts <span class="Special">""</span>
+<span class="LineNr">55 </span>  puts <span class="Special">"</span><span class="Constant">NBest values:</span><span class="Special">"</span>
+<span class="LineNr">56 </span>  response.nbest.each <span class="Statement">do</span> |<span class="Identifier">n</span>|
+<span class="LineNr">57 </span>    puts <span class="Special">"</span><span class="Constant">---------------</span><span class="Special">"</span>
+<span class="LineNr">58 </span>    n.each_pair <span class="Statement">do</span> |<span class="Identifier">name</span>, <span class="Identifier">value</span>|
+<span class="LineNr">59 </span>      <span class="Statement">if</span> name == <span class="Constant">:nlu_hypothesis</span>
+<span class="LineNr">60 </span>        puts <span class="Special">"</span><span class="Special">\t</span><span class="Constant">NLU Hypothesis:</span><span class="Special">"</span>
+<span class="LineNr">61 </span>        value.each <span class="Statement">do</span> |<span class="Identifier">v</span>|
+<span class="LineNr">62 </span>          v.each_pair { |<span class="Identifier">x</span>, <span class="Identifier">y</span>| puts <span class="Special">"</span><span class="Special">\t\t</span><span class="Special"># {</span>x<span class="Special">}</span><span class="Constant">: </span><span class="Special"># {</span>y<span class="Special">}</span><span class="Special">"</span> }
+<span class="LineNr">63 </span>        <span class="Statement">end</span>
+<span class="LineNr">64 </span>      <span class="Statement">else</span>
+<span class="LineNr">65 </span>        puts <span class="Special">"</span><span class="Special">\t</span><span class="Special"># {</span>name<span class="Special">}</span><span class="Constant">: </span><span class="Special"># {</span>value<span class="Special">}</span><span class="Special">"</span>
+<span class="LineNr">66 </span>      <span class="Statement">end</span>
+<span class="LineNr">67 </span>    <span class="Statement">end</span>
+<span class="LineNr">68 </span>  <span class="Statement">end</span>
+<span class="LineNr">69 </span>
+<span class="LineNr">70 </span><span class="Statement">end</span>
+              
+                </pre>
+
+            </section>
+
+        </div>
+
+
+
+        <div id="php">
+            <section id="php_speech">
+                <pre class="codeElement">
+<span class="LineNr"> 1 </span><span class="Special"><?php</span>
+<span class="LineNr"> 2 </span><span class="Comment">// make sure this index.php file is in the same directory as the 'lib' folder.</span>
+<span class="LineNr"> 3 </span><span class="PreProc">require_once</span> <span class="Constant">__DIR__</span> . '<span class="Constant">/lib/OAuth/OAuthTokenService.php</span>';
+<span class="LineNr"> 4 </span><span class="PreProc">require_once</span> <span class="Constant">__DIR__</span> . '<span class="Constant">/lib/Speech/SpeechService.php</span>';
+<span class="LineNr"> 5 </span>
+<span class="LineNr"> 6 </span><span class="Comment">// use any namespaced classes</span>
+<span class="LineNr"> 7 </span><span class="PreProc">use</span> Att\Api\OAuth\OAuthTokenService;
+<span class="LineNr"> 8 </span><span class="PreProc">use</span> Att\Api\Speech\SpeechService;
+<span class="LineNr"> 9 </span>
+<span class="LineNr">10 </span><span class="Comment">// Use the app settings from developer.att.com for the following values.</span>
+<span class="LineNr">11 </span><span class="Comment">// Make sure Speech is enabled the app key/secret.</span>
+<span class="LineNr">12 </span>
+<span class="LineNr">13 </span><span class="Comment">// Enter the value from 'App Key' field</span>
+<span class="LineNr">14 </span>$<span class="Identifier">clientId</span> = '<span class="Constant">ENTER VALUE!</span>';
+<span class="LineNr">15 </span>
+<span class="LineNr">16 </span><span class="Comment">// Enter the value from 'Secret' field</span>
+<span class="LineNr">17 </span>$<span class="Identifier">clientSecret</span> = '<span class="Constant">ENTER VALUE!</span>';
+<span class="LineNr">18 </span>
+<span class="LineNr">19 </span><span class="Comment">// Enter path of file to translate</span>
+<span class="LineNr">20 </span>$<span class="Identifier">fname</span> = '<span class="Constant">ENTER VALUE!</span>';
+<span class="LineNr">21 </span>
+<span class="LineNr">22 </span><span class="Comment">// Create service for requesting an OAuth token</span>
+<span class="LineNr">23 </span>$<span class="Identifier">osrvc</span> = <span class="PreProc">new</span> OAuthTokenService<span class="Special">(</span>'<span class="Constant"><a href="https://api.att.com">https://api.att.com</a></span>', $<span class="Identifier">clientId</span>, $<span class="Identifier">clientSecret</span><span class="Special">)</span>;
+<span class="LineNr">24 </span>
+<span class="LineNr">25 </span><span class="Comment">// Get OAuth token</span>
+<span class="LineNr">26 </span>$<span class="Identifier">token</span> = $<span class="Identifier">osrvc</span><span class="Type">-></span>getToken<span class="Special">(</span>'<span class="Constant">SPEECH</span>'<span class="Special">)</span>;
+<span class="LineNr">27 </span>
+<span class="LineNr">28 </span><span class="Comment">// Create service for interacting with the Speech api</span>
+<span class="LineNr">29 </span>$<span class="Identifier">speechSrvc</span> = <span class="PreProc">new</span> SpeechService<span class="Special">(</span>'<span class="Constant"><a href="https://api.att.com">https://api.att.com</a></span>', $<span class="Identifier">token</span><span class="Special">)</span>;
+<span class="LineNr">30 </span>
+<span class="LineNr">31 </span><span class="Comment">// Translate file</span>
+<span class="LineNr">32 </span>$<span class="Identifier">response</span> = $<span class="Identifier">speechSrvc</span><span class="Type">-></span>speechToText<span class="Special">(</span>$<span class="Identifier">fname</span>, '<span class="Constant">Generic</span>'<span class="Special">)</span>;
+<span class="LineNr">33 </span>
+<span class="LineNr">34 </span><span class="Special">?></span>
+<span class="LineNr">35 </span><span class="Comment"><!DOCTYPE html></span>
+<span class="LineNr">36 </span><span class="Identifier"><</span><span class="Statement">html</span><span class="Identifier">></span>
+<span class="LineNr">37 </span>  <span class="Identifier"><</span><span class="Statement">head</span><span class="Identifier">></span>
+<span class="LineNr">38 </span><span class="PreProc">    </span><span class="Identifier"><</span><span class="Statement">title</span><span class="Identifier">></span><span class="Title">AT</span><span class="Special">&amp;</span><span class="Title">T Speech Example</span><span class="Identifier"></</span><span class="Statement">title</span><span class="Identifier">></span>
+<span class="LineNr">39 </span><span class="PreProc">  </span><span class="Identifier"></</span><span class="Statement">head</span><span class="Identifier">></span>
+<span class="LineNr">40 </span>  <span class="Identifier"><</span><span class="Statement">body</span><span class="Identifier">></span>
+<span class="LineNr">41 </span>  <span class="Special"><?php</span> <span class="Identifier">var_dump</span><span class="Special">(</span>$<span class="Identifier">response</span><span class="Special">)</span>; <span class="Special">?></span>
+<span class="LineNr">42 </span>  <span class="Identifier"></</span><span class="Statement">body</span><span class="Identifier">></span>
+<span class="LineNr">43 </span><span class="Identifier"></</span><span class="Statement">html</span><span class="Identifier">></span>
+                </pre>
+
+            </section>
+
+        </div>
+    </div>
+</section>
+

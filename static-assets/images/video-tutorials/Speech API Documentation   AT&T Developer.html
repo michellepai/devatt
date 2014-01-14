@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://developer.att.citrusbyte.com/api/speech/docs -->
+<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Speech API Documentation | AT&amp;T Developer</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Use AT&amp;T APIs to build, test, and certify applications across a range of devices and platforms.">
+    <meta name="keywords" content="AT&amp;T Developer, AT&amp;T APIs, APIs, API, Speech API, SMS API, Network Services, Developers, Mobile Apps, Mobile Devices, Cross Carrier Distribution Opportunities, Developer Program, API SDK, SDK, SDKs, U-Verse Enabled, AT&amp;T ARO, LTE, 4G, AT&amp;T, AT&amp;T Wireless">
+    <meta name="robots" content="noindex">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=640">
+
+    <!-- Fonts
+    ================================================== -->
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="http://developer.att.citrusbyte.com/css/skeleton.css">
+
+      <link rel="stylesheet" href="http://developer.att.citrusbyte.com/css/default.css">
+
+    <!--[if lt IE 9]>
+      <script src="/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="./Speech API Documentation   AT&T Developer_files/4039.js" async="" type="text/javascript"></script><script async="" src="./Speech API Documentation   AT&T Developer_files/analytics.js"></script><script src="./Speech API Documentation   AT&T Developer_files/jquery-1.9.1.min.js" type="text/javascript"></script><style type="text/css"></style>
+    <script src="./Speech API Documentation   AT&T Developer_files/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/scroll-fixed.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/bootstrap-carousel.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/ZeroClipboard.min.js" type="text/javascript"></script>
+    <script src="./Speech API Documentation   AT&T Developer_files/mobile-menu.js" type="text/javascript"></script>
+    <script>window.app = {};</script>
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="http://developer.att.citrusbyte.com/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://developer.att.citrusbyte.com/icons/apple-touch-icon-iphone.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://developer.att.citrusbyte.com/icons/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://developer.att.citrusbyte.com/icons/apple-touch-icon-iphone4.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://developer.att.citrusbyte.com/icons/touch-icon-ipad-retina.png">
+
+  </head>
+
+  <body class="">
+
+    <div id="sidr" class="sidr left">
+  <ul>
+    <li>
+    	<span>
+        AT&amp;T APIs
+        <div class="collapse"></div>
+      </span>
+      <ul>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/speech">
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/speech-icon.png" data-at2x="/images/hi-res/api-icons/speech-icon.png">
+            Speech
+          </a>
+        </li>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/call-management">
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/call-management-icon.png" data-at2x="/images/hi-res/api-icons/call-management-icon.png">
+            Call Management (Beta)
+          </a>
+        </li>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/sms-mms">
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/sms-icon.png" data-at2x="/images/hi-res/api-icons/sms-icon.png">
+            SMS
+          </a>
+        </li>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/sms-mms">
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/mms-icon.png" data-at2x="/images/hi-res/api-icons/mms-icon.png">
+            MMS
+          </a>
+        </li>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/immn">
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/immn-icon.png" data-at2x="/images/hi-res/api-icons/immn-icon.png">
+            In-App Messaging
+          </a>
+        </li>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/list">
+            View all APIs...
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="http://developer.att.citrusbyte.com/api/price">
+        Pricing
+      </a>
+    </li>
+    <li>
+      <a href="http://developer.att.citrusbyte.com/api/stories">
+        Success Stories
+      </a>
+    </li>
+    <li>
+      <a href="http://developer.att.citrusbyte.com/aro">
+        AT&amp;T ARO
+      </a>
+    </li>
+    <li>
+      <a href="http://developer.att.citrusbyte.com/api/speech/docs#" class="remove-responsive">
+        <span>View Full Website</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <div id="content-area" style="left: 0px;">
+
+      <div class="notification">
+  <div class="notification-icon form-icon">Notification icon</div>
+  <span>Notification text</span>
+  <a class="close form-icon" title="Close Message">Close</a> 
+</div>
+
+      <div id="att-header" class="container">
+
+  <a class="logo" href="http://developer.att.citrusbyte.com/">
+    <img class="att-logo" title="AT&amp;T Developer" alt="AT&amp;T Developer" src="./Speech API Documentation   AT&T Developer_files/logo-developer.png" data-at2x="/images/hi-res/logo-developer.png" width="127">
+  </a>
+  <form id="quick-search" class="hide-border" action="http://developer.att.citrusbyte.com/search-results">
+    <button class="magnifying-glass form-icon" type="submit" value="Search" title="Click here to see search results"></button>
+    <input id="search" type="text" autocomplete="off" placeholder="Type here to search">
+    <div id="suggested-result" style="display: none;">
+      <ul>
+        <li>
+          <a href="http://developer.att.citrusbyte.com/api/speech">Speech API</a>
+        </li>
+      </ul>
+    </div>
+  </form>
+
+  <nav>
+    <div class="dropdown">
+      <a href="http://developer.att.citrusbyte.com/api/list" class="expands">
+        <abbr>APIs</abbr>
+      </a>
+      <div class="dropdown-menu apis">
+        <ul>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech">
+              <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/speech-icon(1).png" data-at2x="/images/hi-res/api-icons/speech-icon.png" width="20">
+              Speech
+            </a>
+            <a class="docs-link" href="./Speech API Documentation   AT&T Developer_files/Speech API Documentation   AT&T Developer.html">Docs</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/call-management">
+              <img class="api-icon" title="Call Management API" alt="Call Management API" src="./Speech API Documentation   AT&T Developer_files/call-management-icon(1).png" data-at2x="/images/hi-res/api-icons/call-management-icon.png" width="20">
+              Call Management (Beta)
+            </a>
+            <a class="docs-link" href="http://developer.att.citrusbyte.com/api/call-management/docs">Docs</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/sms-mms">
+              <img class="api-icon" title="SMS API" alt="SMS API" src="./Speech API Documentation   AT&T Developer_files/sms-icon(1).png" data-at2x="/images/hi-res/api-icons/sms-icon.png" width="20">
+              SMS
+            </a>
+            <a class="docs-link" href="http://developer.att.citrusbyte.com/api/sms/docs">Docs</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/sms-mms">
+              <img class="api-icon" title="MMS API" alt="MMS API" src="./Speech API Documentation   AT&T Developer_files/mms-icon(1).png" data-at2x="/images/hi-res/api-icons/mms-icon.png" width="20">
+              MMS
+            </a>
+            <a class="docs-link" href="http://developer.att.citrusbyte.com/api/mms/docs">Docs</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/immn">
+              <img class="api-icon" title="IMMN API" alt="IMMN API" src="./Speech API Documentation   AT&T Developer_files/immn-icon(1).png" data-at2x="/images/hi-res/api-icons/immn-icon.png" width="20">
+              In-App Messaging
+            </a>
+            <a class="docs-link" href="http://developer.att.citrusbyte.com/api/immn/docs">Docs</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/list">
+              View all APIs
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="http://developer.att.citrusbyte.com/community" class="expands">Community</a>
+      <div class="dropdown-menu">
+        <ul>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/community/events">
+              Hackathons &amp; Events
+            </a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/community/forums">
+              Forums
+            </a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/community/blog">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <a href="http://developer.att.citrusbyte.com/stories">
+          Stories
+        </a>
+
+      <a href="http://developer.att.citrusbyte.com/api/pricing">
+        Pricing
+      </a>
+
+    <div class="dropdown">
+      <a href="http://developer.att.citrusbyte.com/login" class="login">Login</a>
+    </div>
+    <a class="button" href="http://developer.att.citrusbyte.com/signup">Get Started Free</a>
+
+  </nav>
+</div>
+
+      <div id="att-header-responsive" class="container">
+	<nav>
+    <a id="mobile-menu" href="http://developer.att.citrusbyte.com/api/speech/docs#">
+      <img title="Touch to see menu" alt="Mobile Menu" src="./Speech API Documentation   AT&T Developer_files/dropdown-menu.png" data-at2x="/images/responsive/dropdown-menu.png">
+    </a>
+	</nav>
+
+  <a class="logo" href="http://developer.att.citrusbyte.com/">
+    <img class="att-logo" title="AT&amp;T Developer" alt="AT&amp;T Developer" src="./Speech API Documentation   AT&T Developer_files/logo-developer(1).png" data-at2x="/images/responsive/logo-developer.png" width="212">
+  </a>
+</div>
+
+      <script type="text/javascript">window.app.activeButton = 'docs';</script>
+
+<div class="docs-page">
+  <div class="sub-header-container">
+  <div class="sub-header fixed-scroll" style="position: fixed; top: 0px; left: 1px; right: 1px;">
+    <div class="container">
+      <a href="http://developer.att.citrusbyte.com/api/speech">
+        <h1>
+            <img class="api-icon" title="Speech API" alt="Speech API" src="./Speech API Documentation   AT&T Developer_files/speech-icon(1).png" data-at2x="/images/hi-res/api-icons/speech-icon.png" width="35">
+          Speech API
+        </h1>
+      </a>
+      <nav>
+        <ul>
+            <li class="tour">
+              <a href="http://developer.att.citrusbyte.com/api/speech" title="Take a tour of the Speech API">API Tour</a>
+            </li>
+            <li class="docs active">
+              <a href="./Speech API Documentation   AT&T Developer_files/Speech API Documentation   AT&T Developer.html" title="Read the Speech API Documentation">Documentation</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+  <div class="document-area">
+    <header class="docs-header">
+  <div class="inner">
+    <aside>
+      API Version
+
+      <div class="fancy-select"><select>
+        <option selected="selected" value="Version 3">Version 3</option>
+        <option value="Version 4">Version 4</option>
+      </select><span class="cover"><span class="text">Version 3</span></span><span class="arrow form-icon"></span></div>
+    </aside>
+
+    <div class="main">
+      <div class="notice">
+        <div class="notification-icon form-icon" title="alert">Alert</div>
+        This is an AT&amp;T Only API. <a class="learn-more" href="http://developer.att.citrusbyte.com/api/speech/docs#">Learn more</a>
+        <a href="https://apigee.com/att/embed/console/ATT?v=2" target="_blank" class="button blue" title="Get started!">API Console</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <section class="docs-content">
+      <div class="inner">
+        <aside>
+          <div class="fixed-scroll" style="position: fixed; top: 92px; left: 121px; right: auto;">
+            <div class="toc">
+              <ul class="level-1">
+                <li class=""><a href="http://developer.att.citrusbyte.com/api/speech/docs#introduction">1. Introduction</a></li>
+                <li class=""><a href="http://developer.att.citrusbyte.com/api/speech/docs#authorization">2. OAuth</a></li>
+                <li class="">
+                  <a href="http://developer.att.citrusbyte.com/api/speech/docs#resources">3. Resources</a>
+                  <ul class="level-2">
+                    <li class="">
+                      <a href="http://developer.att.citrusbyte.com/api/speech/docs#resources-speech-to-text">Speech to Text</a>
+                    </li>
+                    <li class="">
+                      <a href="http://developer.att.citrusbyte.com/api/speech/docs#resources-text-to-speech">Text to Speech</a>
+                    </li>
+                    <li class="">
+                      <a href="http://developer.att.citrusbyte.com/api/speech/docs#resources-speech-to-text-custom">Speech to Text Custom</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class=""><a href="http://developer.att.citrusbyte.com/api/speech/docs#quickstart">4. Quickstart</a></li>
+                <li class=""><a href="http://developer.att.citrusbyte.com/api/speech/docs#sample-apps">5. Sample Apps</a></li>
+                <li class="highlighted"><a href="http://developer.att.citrusbyte.com/api/speech/docs#tutorials">6. Video Tutorials</a></li>
+                <li class=""><a href="http://developer.att.citrusbyte.com/api/speech/docs#sdks-and-plugins">7. SDKs &amp; Plugins</a></li>
+                <li><a href="http://developer.att.citrusbyte.com/api/speech/docs#faqs">8. FAQs</a></li>
+                <li><a href="http://developer.att.citrusbyte.com/api/errors?api=speech" target="_blank">9. Errors</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <div class="main">
+          <div class="back-to-top">
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#" class="retina-icon" title="Click here to go back the top of the document"></a>
+          </div>
+
+          <div class="deprecated">
+            This API has been deprecated. You can find the latest version <a href="http://developer.att.citrusbyte.com/api/release-notes">here</a>
+          </div>
+
+          <section id="introduction" class="level-1">
+  <header>1. Introduction</header>
+  <p>
+    <strong>The Speech API converts speech-to-text (ASR), text-to-speech (TTS) and provides a facility for custom speech-to-text grammar lists. Getting started is easy and many custom parameters are available in the header or body of an API request to unlock more powerful features.</strong>
+  </p>
+
+  <section id="introduction-considerations" class="level-2">
+    <header>Considerations</header>
+    <p>
+      The RESTful Speech API provided by AT&amp;T has the following <strong>considerations for you to keep in mind:</strong>
+    </p>
+
+    <section id="introduction-considerations-audio-content" class="level-3">
+      <header>1.1. Audio Content</header>
+      <p>
+        <strong>The audio payload must have a specific encoding that is specified in the Content-Type HTTP header parameter. If the Content-Type parameter does not match one of the following types, then an error is returned to the requester.</strong>
+      </p>
+
+      <ul class="small">
+        <li>
+          <span><strong>audio/amr:</strong> Preferred for it's smaller size.</span>
+          <ul>
+            <li>
+              <span>Lorem ipsum dolor sit amet</span>
+              <ul><li><span>Lorem ipsum dolor sit amet</span></li></ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span><strong>audio/wav:</strong> More common, but larger than amr files.</span>
+        </li>
+      </ul>
+
+      <p>
+        <strong>The specific supported formats are:</strong>
+      </p>
+
+      <ul class="small">
+        <li><span>WAV, 16 bit PCM, single channel, 8 kHz sampling</span></li>
+        <li><span>AMR (narrowband), 12.2 kbit/s, 8 kHz sampling</span></li>
+      </ul>
+
+      <p><strong>Audio Data limit</strong></p>
+
+      <ul class="small">
+        <li><span>The audio file must be less than or equal to 4 minutes.</span></li>
+      </ul>
+    </section>
+
+    <section id="introduction-considerations-speech-context" class="level-3">
+      <header>1.2. Speech Context</header>
+      <p>
+        <strong>The supported speech contexts are as follows:</strong>
+      </p>
+
+      <ul class="small">
+        <li><span>Business Search</span></li>
+        <li><span>Web Search</span></li>
+        <li><span>SMS</span></li>
+        <li><span>Voicemail to text</span></li>
+        <li><span>Question and Answer</span></li>
+        <li><span>Television</span></li>
+        <li><span>Generic</span></li>
+      </ul>
+
+      <p>
+        <strong>The speech context is specified in the HTTP headers, using the X-SpeechContext header. The speech context is used by the Speech services engine to properly format the transcribed text. It does not provide any additionally functionality such mashups or service blending. For example:</strong>
+      </p>
+
+      <ul>
+        <li><span>If you select the Generic context and count to five ("one two three four five") as a request, then the response in text would be the words one two three four five.</span></li>
+        <li><span>If you select the Business context and count to five ("one two three four five") as a request, then the response in text format would be the numbers 12345.</span></li>
+      </ul>
+    </section>
+
+    <section id="introduction-considerations-request-payload" class="level-3">
+      <header>1.3. Request Payload</header>
+      <p>
+        <strong>The request payload can be sent in one of two ways:</strong>
+      </p>
+      <ul>
+        <li>
+          <span><strong>All at once:</strong>
+            The Content-Length HTTP header must be present and have a value of the total size of the audio data.</span>
+        </li>
+        <li>
+          <span><strong>Streamed:</strong>
+            The Transfer-Encoding HTTP header must be present and have a value of chunked. The Content-Length 	HTTP header should not be present. The recommended chunked length is 0200 hexadecimal, or 512 decimal, bytes. A zero (0) at the end of the streaming indicates the end of the stream.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="introduction-considerations-unsuccessful-transcription" class="level-3">
+      <header>1.4. Unsuccessful Transcription</header>
+      <p>
+        <strong>There may be situations where the speech enabler has successfully accepted the audio input, but it cannot produce any text associated with that audio. In this case, an SVC0001 error is returned within an HTTP 400 to indicate one of the following situations:</strong>
+      </p>
+
+      <ul class="small">
+        <li><span>No Speech</span></li>
+        <li><span>Not Enough Speech</span></li>
+        <li><span>Too Much Speech</span></li>
+        <li><span>Too Quiet</span></li>
+        <li><span>Speech Too Soon</span></li>
+      </ul>
+    </section>
+
+    <section id="introduction-considerations-failed-requests" class="level-3">
+      <header>1.5. Failed Requests</header>
+      <p>The API Gateway does not retry failed requests to the speech enabler. Therefore, the developer must handle the error and retry the request in the app.</p>
+    </section>
+
+    <section id="introduction-considerations-language-support" class="level-3">
+      <header>1.6. Language Support</header>
+      <p>Currently, only English transcriptions are supported with the exception of the Generic context, which is bilingual and accepts English and Spanish. The Speech service attempts to distinguish the language from the audio itself.</p>
+    </section>
+  </section>
+
+  <section id="introduction-provisioning" class="level-2">
+    <header>Provisioning</header>
+    <p>
+      <strong>The RESTful Speech API provided by AT&amp;T requires that you provision your app as follows.</strong>
+    </p>
+    <ul>
+      <li>
+        <span>You must register the Speech service for your an app account on the AT&amp;T Developer Program web site in order to utilize this API.</span>
+      </li>
+    </ul>
+
+    <section id="introduction-provisioning-speech-to-text-method" class="level-3">
+      <header>The Speech to Text Method</header>
+      <ul>
+        <li><span>Version 1 of this method is obsolete. You should modify your app to use the most recent version.</span></li>
+        <li><span>Accepts only single-channel audio formats.</span></li>
+        <li><span>Uses the X-SpeechContext header parameter to provide context for more accurate results.</span></li>
+        <li><span>Limited to one minute of audio per request. If the VoiceMail context is used, then the limit is four minutes of audio per request.</span></li>
+        <li><span>Accepts audio data file or streaming (chunked) audio data as input.</span></li>
+        <li><span>Most contexts support English only. The Generic context supports English or Spanish.</span></li>
+        <li><span>If the audio data is not understood, then in most cases the HTTP status code of 200 OK is returned and the Status parameter is set to Speech Not Recognized.</span></li>
+        <li><span>Failed requests are not retried by the API Gateway. Therefore, you must specify that your app handles this.</span></li>
+      </ul>
+    </section>
+
+    <section id="introduction-provisioning-text-to-speech-method" class="level-3">
+      <header>The Text to Speech Method</header>
+      <ul>
+        <li><span>Requires the new, unique scope value of TTS.</span></li>
+        <li><span>Accepts plain text or XML-based Speech Synthesis Markup Language (SSML) as input.</span></li>
+        <li><span>Returns binary audio data.</span></li>
+        <li><span>Is limited to 500 bytes of text for processing.</span></li>
+        <li><span>Supports English or Spanish with male or female synthesized voices.</span></li>
+      </ul>
+    </section>
+    <section id="introduction-provisioning-speech-to-text-custom-method" class="level-3">
+      <header>The Speech to Text Custom Method</header>
+      <ul>
+        <li><span>Requires the new, unique scope value of TTS.</span></li>
+        <li><span>Differs from the Speech to Text method in that you may supply your own grammar of hints for more accurated results.</span></li>
+        <li><span>Uses the X-SpeechContext parameter to differentiate between GrammarList and GenericHints style request</span></li>
+        <li><span>Supports an extended list of 19 languajes.</span></li>
+      </ul>
+      <figure>
+        <img title"figure="" 1.1"="" alt="" "figure="" src="./Speech API Documentation   AT&T Developer_files/speech-to-text-custom-method.png" data-at2x="/images/speech-to-text-custom-method.png">
+        <p>
+          <strong>Figure 1.1 -</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere purus quis metus adipiscing tincidunt non eget leo. Nam tristique, purus quis tincidunt viverra, dolor libero congue orci, at aliquam risus odio in sem.
+        </p>
+      <figure>
+    </figure></figure></section>
+  </section>
+</section>
+
+          <section id="authorization" class="level-1">
+  <header>2. OAuth</header>
+  <p>
+    <strong>Our APIs use OAuth so you will need to include your OAuth token in each request. To obtain a token find your `key` and application `key` available from your <a href="http://developer.att.citrusbyte.com/api/speech/docs#">My Apps</a> page or <a href="http://developer.att.citrusbyte.com/api/speech/docs#">register</a> to get started for free.</strong>
+  </p>
+  <p>
+    <strong>You may authorize access to text-to-speech, speech-to-text, or custom speech-to-text by using the scopes below:</strong>
+    </p><ul>
+      <li><span>`TTS` for text-to-speech</span></li>
+      <li><span>`SPEECH` for speech-to-text</span></li>
+      <li><span>`STTC` for speech-to-text custom<span></span></span></li>
+    </ul>
+  <p></p>
+  <p>
+    <strong>To obtain your OAuth token run the following command from the CLI and replace  `{{KEY}}`, `{{SECRET}}`, and `{{SCOPE}}` apps key, secret, and the api scope you wish to access:</strong>
+  </p>
+  <div class="code">
+    <h1 class="code-caption">Get Access Token via OAuth for Speech:</h1>
+    <div class="code-block">
+      <span class="copy-button" data-clipboard-text="curl &quot;https://api.att.com/oauth/token&quot; \
+        --insecure \
+        --header &quot;Accept: application/x-www-form-urlencoded&quot; \
+        --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+        --data &quot;grant_type=client_credentials&amp;client_id={{KEY}}&amp;client_secret={{SECRET}}&amp;scope={{SCOPE}}&quot;">copy</span>
+
+      <pre>        curl "https://api.att.com/oauth/token" \
+        --insecure \
+        --header "Accept: application/x-www-form-urlencoded" \
+        --header "Content-Type: application/x-www-form-urlencoded" \
+        --data "grant_type=client_credentials&amp;client_id={{KEY}}&amp;client_secret={{SECRET}}&amp;scope={{SCOPE}}"
+      </pre>
+    </div>
+  </div>
+  <p>
+    <strong>A successful response will contain an access token, expiration period (0 for tokens which don't expire) and a refresh token:</strong>
+  </p>
+  <div class="code">
+    <pre>      {
+      "access_token":"9f101ed598ca7fd975fadc2a12b85a2c",
+      "expires_in":"0",
+      "refresh_token":"e2bc4782d32a1357f96e3604ad79724064008006"
+      }
+    </pre>
+  </div>
+  <p>
+    <strong>Extract the value from `access_token` to use in the `Authorization` HTTP header to authenticate API requests. When sending an API request a successfully constructed `Authorization` HTTP header will look like this:</strong>
+  </p>
+  <div class="code">
+    <pre>Authorization: Bearer 551f90a1833e577b13dba1c28a6289c5</pre>
+  </div>
+</section>
+
+          <section id="resources" class="level-1">
+  <header>3. Resources</header>
+
+  <section id="resources-speech-to-text" class="level-2">
+    <header>Speech to Text API</header>
+    <section id="resources-speech-to-text-overview" class="level-3">
+      <header>Overview</header>
+      <p>The <strong>Speech To Text method transcribes speech audio files into text-based output.</strong> The server applies a service specific lexicon and transcribes the original text into an enhanced text output. The original and the enhanced text outputs are both returned as separate parameter values in the response.</p>
+
+      <div class="important form-icon-after">
+        <p>Ut pharetra turpis nec dui facilisis feugiat. Maecenas id erat non orci interdum aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam adipiscing, metus sit amet ornare pharetra, turpis felis eleifend nisi, eget blandit justo justo auctor nulla. Mauris ipsum mi, lacinia a tincidunt quis, malesuada eget libero. Fusce mi diam, blandit eu tempor vel, mollis eget erat. Nam rutrum tempor augue sed facilisis. Praesent condimentum fermentum urna non.</p>
+      </div>
+    </section>
+
+    <section id="resources-speech-to-text-oauth" class="level-3">
+      <ul class="oauth">
+        <li>
+          <span>OAuth Scope</span>
+        </li>
+        <li>
+          <p><span>Scope:</span> SPEECH</p><p>
+        </p></li>
+        <li>
+          <p><span>Model:</span> client_credentials</p><p>
+        </p></li>
+      </ul>
+      <ul class="oauth">
+        <li>
+          <span>Resource</span>
+        </li>
+        <li class="code">
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="POST https://api.att.com/v3/speech/speechToText">copy</span>
+
+            <pre>POST https://api.att.com/v3/speech/speechToText
+            </pre>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="resources-speech-to-text-examples" class="level-3">
+      <header>Examples</header>
+
+      <div class="tabs">
+        <ul class="tab_nav">
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#speech-to-text-non-streaming" class="selected">Non-Streaming</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#speech-to-text-streaming">Streaming</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#speech-to-text-request">cURL Request</a>
+          </li>
+        </ul>
+
+        <div id="speech-to-text-non-streaming" class="code">
+          <h1 class="code-caption">Plain Text Request (Non-Streaming)</h1>
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="POST /speech/v3/SpeechToText HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: application/json
+Content-length: 1234
+Connection: keep-alive
+Content-Type: audio/x-wav
+
+{...audio data...}">copy</span>
+
+            <pre>POST /speech/v3/SpeechToText HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: application/json
+Content-length: 1234
+Connection: keep-alive
+Content-Type: audio/x-wav
+
+{...audio data...}
+            </pre>
+          </div>
+
+          <h1 class="code-caption">Response</h1>
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="HTTP/1.1 100 Continue
+
+HTTP/1.1 100 Continue
+Via: 1.1 api.att.com
+
+HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 11:38:37 GMT
+Server: Apache-Coyote/1.1
+Accept: application/json
+Content-Length: 309
+Content-Type: application/json
+... additional HTTP headers ...
+Via: 1.1 api.att.com
+
+{
+&quot;Recognition&quot;:{
+&quot;Status&quot;:&quot;OK&quot;,
+&quot;ResponseId&quot;:&quot;8604da07c53f439b784900c457466b6f&quot;,
+&quot;Info&quot;:{
+&quot;metrics&quot;:{
+&quot;audioTime&quot;:0.920000017,
+&quot;audioBytes&quot;:29440
+}
+},
+&quot;NBest&quot;:[
+{
+&quot;WordScores&quot;:[
+1,
+1
+],
+&quot;Confidence&quot;:1,
+&quot;Grade&quot;:&quot;accept&quot;,
+&quot;ResultText&quot;:&quot;Hello world.&quot;,
+&quot;Words&quot;:[
+&quot;Hello&quot;,
+&quot;world.&quot;
+],
+&quot;LanguageId&quot;:&quot;en-US&quot;,
+&quot;Hypothesis&quot;:&quot;hello world&quot;
+}
+]
+}
+}">copy</span>
+
+            <pre>HTTP/1.1 100 Continue
+
+HTTP/1.1 100 Continue
+Via: 1.1 api.att.com
+
+HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 11:38:37 GMT
+Server: Apache-Coyote/1.1
+Accept: application/json
+Content-Length: 309
+Content-Type: application/json
+... additional HTTP headers ...
+Via: 1.1 api.att.com
+
+{
+"Recognition":{
+"Status":"OK",
+"ResponseId":"8604da07c53f439b784900c457466b6f",
+"Info":{
+"metrics":{
+"audioTime":0.920000017,
+"audioBytes":29440
+}
+},
+"NBest":[
+{
+"WordScores":[
+1,
+1
+],
+"Confidence":1,
+"Grade":"accept",
+"ResultText":"Hello world.",
+"Words":[
+"Hello",
+"world."
+],
+"LanguageId":"en-US",
+"Hypothesis":"hello world"
+}
+]
+}
+}
+            </pre>
+          </div>
+        </div>
+
+        <div id="speech-to-text-streaming" class="code">
+          <h1 class="code-caption">Plain Text Request (Streaming)</h1>
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="POST /speech/v3/SpeechToText HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: application/xml
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Type: audio/x-wav
+
+200
+{...audio data...}
+200
+{...audio data...}
+200
+{...audio data...}
+0">copy</span>
+
+            <pre>POST /speech/v3/SpeechToText HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: application/xml
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Type: audio/x-wav
+
+200
+{...audio data...}
+200
+{...audio data...}
+200
+{...audio data...}
+0
+            </pre>
+          </div>
+
+          <h1 class="code-caption">Response</h1>
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="HTTP/1.1 100 Continue
+
+HTTP/1.1 100 Continue
+Via: 1.1 api.att.com
+
+HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 11:38:37 GMT
+Server: Apache-Coyote/1.1
+Accept: application/json
+Content-Length: 309
+Content-Type: application/json
+... additional HTTP headers ...
+Via: 1.1 api.att.com
+
+{
+&quot;Recognition&quot;:{
+&quot;Status&quot;:&quot;OK&quot;,
+&quot;ResponseId&quot;:&quot;8604da07c53f439b784900c457466b6f&quot;,
+&quot;Info&quot;:{
+&quot;metrics&quot;:{
+&quot;audioTime&quot;:0.920000017,
+&quot;audioBytes&quot;:29440
+}
+},
+&quot;NBest&quot;:[
+{
+&quot;WordScores&quot;:[
+1,
+1
+],
+&quot;Confidence&quot;:1,
+&quot;Grade&quot;:&quot;accept&quot;,
+&quot;ResultText&quot;:&quot;Hello world.&quot;,
+&quot;Words&quot;:[
+&quot;Hello&quot;,
+&quot;world.&quot;
+],
+&quot;LanguageId&quot;:&quot;en-US&quot;,
+&quot;Hypothesis&quot;:&quot;hello world&quot;
+}
+]
+}
+}">copy</span>
+
+            <pre>HTTP/1.1 100 Continue
+
+HTTP/1.1 100 Continue
+Via: 1.1 api.att.com
+
+HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 11:38:37 GMT
+Server: Apache-Coyote/1.1
+Accept: application/json
+Content-Length: 309
+Content-Type: application/json
+... additional HTTP headers ...
+Via: 1.1 api.att.com
+
+{
+"Recognition":{
+"Status":"OK",
+"ResponseId":"8604da07c53f439b784900c457466b6f",
+"Info":{
+"metrics":{
+"audioTime":0.920000017,
+"audioBytes":29440
+}
+},
+"NBest":[
+{
+"WordScores":[
+1,
+1
+],
+"Confidence":1,
+"Grade":"accept",
+"ResultText":"Hello world.",
+"Words":[
+"Hello",
+"world."
+],
+"LanguageId":"en-US",
+"Hypothesis":"hello world"
+}
+]
+}
+}
+            </pre>
+          </div>
+
+        </div>
+
+        <div id="speech-to-text-request" class="code">
+          <h1 class="code-caption">cURL Request</h1>
+          <p>Using the `curl` CLI tool you can easily post audio data with the `-d` option. If you don't have an audio file to test with try creating one with the text-to-speech API.</p>
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+--header &quot;Authorization: Bearer 551f90a1833e577b13dba1c28a6289c5&quot; \
+--header &quot;Accept: application/json&quot; \
+--header &quot;Content-Type: audio/x-wav&quot; \
+-d @hello-world.wav">copy</span>
+
+            <pre>curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+--header "Authorization: Bearer 551f90a1833e577b13dba1c28a6289c5" \
+--header "Accept: application/json" \
+--header "Content-Type: audio/x-wav" \
+-d @hello-world.wav
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources-speech-to-text-parameters" class="level-3">
+      <header>
+        Parameters
+      </header>
+      <label>
+        <span class="required form-icon"></span>
+        Required Parameters
+      </label>
+
+      <p>The main payload for any speech-to-text request is the binary audio data which is the contents of the request body. You can see examples of streaming and non-streaming requests in the Examples section below.</p>
+
+      <p>All other parameters are HTTP headers and are described below.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>HTTP Header</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Accept</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the format of the body for the response. Options:
+              <ul>
+                <li><span>application/json</span></li>
+                <li><span>application/xml</span></li>
+                <li><span>application/emma+xml</span></li>
+                <br>
+                Default: application/json.
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Authorization</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the authorization. The acceptable format for this parameter is the word "Bearer" followed by a space ( ) and an OAuth access token. If you receive an HTTP status code of 400 or 401 then your authorization token is missing or invalid, respectively
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Content-Type</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the content type. Options:
+              <ul>
+                <li><span>audio/amr</span></li>
+                <li><span>audio/amr-wb</span></li>
+                <li><span>audio/wav</span></li>
+                <li><span>audio/x-wav</span></li>
+                <li><span>audio/x-speex</span></li>
+                <li><span>audio/x-speex-with-header-byte;rate=16000</span></li>
+                <li><span>audio/x-speex-with-header-byte;rate=8000</span></li>
+                <li><span>audio/raw;coding=linear;rate=16000;byteorder=LE</span></li>
+                <li><span>audio/raw;coding=linear;rate=16000;byteorder=BE</span></li>
+                <li><span>audio/raw;coding=linear;rate=8000;byteorder=LE</span></li>
+                <li><span>audio/raw;coding=linear;rate=8000;byteorder=BE</span></li>
+                <li><span>audio/raw;coding=ulaw;rate=16000</span></li>
+                <li><span>audio/raw;coding=ulaw;rate=8000</span></li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Content-Length</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              (Required only for non-streaming requests) The length in bytes of the audio data
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Transfer-Enconding</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              (Required for streaming only) You must set this parameter to `chunked` for streaming requests
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">X-SpeechContext</span>
+              </div>
+            </td>
+            <td>
+              Specifies the speech context being applied to the transcribed text. The acceptable values for this parameter are:
+              <ul>
+                <li><span>BusinessSearch</span></li>
+                <li><span>Gaming</span></li>
+                <li><span>Generic</span></li>
+                <li><span>QuestionAndAnswer</span></li>
+                <li><span>SMS</span></li>
+                <li><span>SocialMedia</span></li>
+                <li><span>TV</span></li>
+                <li><span>VoiceMail</span></li>
+                <li><span>WebSearch</span></li>
+              </ul>
+              Default: Generic.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">X-Arg</span>
+              </div>
+            </td>
+            <td>
+              Specifies multiple "extra argument" parameters within a single HTTP header. Example: "X-Arg: Volume=100,Tempo=0". See X-Arg Parameters for options.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section id="resources-speech-to-text-x-arg-parameters" class="level-3">
+      <header>X-Arg Parameters</header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>HTTP Header</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">ShowWordTokens</span>
+              </div>
+            </td>
+            <td>
+              Increases detail of output. For formatted ResultText shows additional detail for named entitites and the words they were derived from. For unformatted ResultText shows additional detail for all words. Default: false
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Content-Language</span>
+              </div>
+            </td>
+            <td>
+              Language of the audio, `en-US` for English in the United States of America or `es-US` for Spanish in the United States of America. Default: `en-US`. This parameter is only used when the X-SpeechContext parameter value is set to Generic
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section id="resources-speech-to-text-error-codes" class="level-3">
+      <header>Error Codes</header>
+      <p class="small">To help troubleshoot your test or production App, browse our Error Codes page to get error details or enter the code using our search tool.</p>
+      <div class="button blue large">Error Codes Page</div>
+    </section>
+  </section>
+
+  <section id="resources-text-to-speech" class="level-2">
+    <header>Text to Speech API</header>
+    <section id="resources-text-to-speech-overview" class="level-3">
+      <header>Overview</header>
+      <p>
+        Convert plain text from English or Spanish into audio data. Chose from a synthesized male or female voice and AMR or WAV audio formats.
+      </p>
+    </section>
+
+    <section id="resources-text-to-speech-oauth">
+      <ul class="oauth">
+        <li>
+          <span>OAuth Scope</span>
+        </li>
+        <li>
+          <p><span>Scope:</span> TTS</p><p>
+        </p></li>
+        <li>
+          <p><span>Model:</span> client_credentials</p><p>
+        </p></li>
+      </ul>
+      <ul class="oauth">
+        <li>
+          <span>Resource</span>
+        </li>
+        <li class="code">
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="POST https://api.att.com/v3/speech/textToSpeech">copy</span>
+
+            <pre>POST https://api.att.com/v3/speech/textToSpeech
+            </pre>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="resources-text-to-speech-examples" class="level-3">
+      <header>Examples</header>
+
+      <div class="tabs">
+        <ul class="tab_nav">
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#text-to-text-request" class="selected">Plain Text Request</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#text-to-text-curl">cURL</a>
+          </li>
+          <li>
+            <a href="http://developer.att.citrusbyte.com/api/speech/docs#text-to-text-response">Response</a>
+          </li>
+        </ul>
+
+      <div id="text-to-text-request" class="code">
+        <h1 class="code-caption">Plain Text Request</h1>
+        <div class="code-block">
+          <span class="copy-button" data-clipboard-text="POST /speech/v3/textToSpeech HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: audio/x-wav
+Content-Type: text/plain
+
+Hello World!">copy</span>
+
+          <pre>POST /speech/v3/textToSpeech HTTP/1.1
+Host: api.att.com
+Authorization: Bearer 9f101ed598ca7fd975fadc2a12b85a2c
+Accept: audio/x-wav
+Content-Type: text/plain
+
+Hello World!
+          </pre>
+        </div>
+      </div>
+
+      <div id="text-to-text-curl" class="code">
+        <h1 class="code-caption">cURL</h1>
+        Using the `curl` CLI tool you can easily convert text to speech and save the binary data to a file with the `-o` option.
+        <div class="code-block">
+          <span class="copy-button" data-clipboard-text="curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+--header &quot;Authorization: Bearer 551f90a1833e577b13dba1c28a6289c5&quot; \
+--header &quot;Content-Type: text/plain&quot; \
+--header &quot;Accept: audio/x-wav&quot; \
+-d &#39;Hello world!&#39; \
+-o hello-world.wav">copy</span>
+
+          <pre>curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+--header "Authorization: Bearer 551f90a1833e577b13dba1c28a6289c5" \
+--header "Content-Type: text/plain" \
+--header "Accept: audio/x-wav" \
+-d 'Hello world!' \
+-o hello-world.wav
+          </pre>
+        </div>
+        On most Linux or Mac command lines you can then type `open hello-world.wav` and your default audio player will play the file.
+      </div>
+
+      <div id="text-to-text-response" class="code">
+        <h1 class="code-caption">Response</h1>
+        <div class="code-block">
+          <span class="copy-button" data-clipboard-text="HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 05:27:39 GMT
+Server: Apache-Coyote/1.1
+Accept: audio/x-wav
+Content-Length: 29484
+Content-Type: audio/x-wav
+... more headers ...
+Via: 1.1 api.att.com
+
+... binary data ...">copy</span>
+
+          <pre>HTTP/1.1 200 OK
+Date: Mon, 03 Jun 2013 05:27:39 GMT
+Server: Apache-Coyote/1.1
+Accept: audio/x-wav
+Content-Length: 29484
+Content-Type: audio/x-wav
+... more headers ...
+Via: 1.1 api.att.com
+
+... binary data ...
+          </pre>
+        </div>
+      </div>
+
+    </div></section>
+
+    <section id="resources-text-to-speech-parameters" class="level-3">
+      <header>Required Parameters</header>
+
+      <p>The main payload for any text-to-speech request is the text data to be converted to speech which is the contents of the request body.</p>
+
+      <p>All other parameters are HTTP headers and are described below.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>HTTP Header</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Accept</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the format of the body for the response. Options:
+              <ul>
+                <li><span>audio/amr</span></li>
+                <li><span>audio/amr-wb</span></li>
+                <li><span>audio/x-wav</span></li>
+                <br>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Authorization</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the authorization. The acceptable format for this parameter is the word "Bearer" followed by a space ( ) and an OAuth access token. If you receive an HTTP status code of 400 or 401 then your authorization token is missing or invalid, respectively
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Content-Type</span>
+                <span class="required form-icon"></span>
+              </div>
+            </td>
+            <td>
+              Specifies the format of the body for the response. Options:
+              <ul>
+                <li><span>text/plain</span></li>
+                <li><span>application/ssml+xml</span></li>
+              </ul>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Content-Language</span>
+              </div>
+            </td>
+            <td>
+              Language of the text, `en-US` for English in the United States of America or `es-US` for Spanish in the United States of America.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">X-Arg</span>
+              </div>
+            </td>
+            <td>
+              Specifies multiple "extra argument" parameters within a single HTTP header. Example: "X-Arg: Volume=100,Tempo=0". See X-Arg Parameters for options.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section id="resources-text-to-speech-x-arg-parameters" class="level-3">
+      <header>X-Arg Parameters</header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>HTTP Header</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Volume</span>
+              </div>
+            </td>
+            <td>
+              Specifies the volume of the output audio ranging from 0 to 500. Default: 100.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">Tempo</span>
+              </div>
+            </td>
+            <td>
+              Specifies the speed of the output audio ranging from -18 to 18. Default: 0.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="identifier">
+              <div class="parameter">
+                <span class="label">VoiceName</span>
+              </div>
+            </td>
+            <td>
+              Specifies the voice to be used for the output audio data. Options: `crystal` for English female, `mike` for English male, `rosa` for Spanish female, `alberto` for Spanish male.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section id="resources-text-to-speech-error-codes" class="level-3">
+      <header>Error Codes</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+  </section>
+
+  <section id="resources-speech-to-text-custom" class="level-2">
+    <header>Speech to Text Custom API</header>
+    <section id="resources-speech-to-text-custom-overview" class="level-3">
+      <header>Overview</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+
+    <section id="resources-speech-to-text-custom-oauth">
+      <ul class="oauth">
+        <li>
+          <span>OAuth Scope</span>
+        </li>
+        <li>
+          <p><span>Scope:</span> SPEECH</p><p>
+        </p></li>
+        <li>
+          <p><span>Model:</span> client_credentials</p><p>
+        </p></li>
+      </ul>
+      <ul class="oauth">
+        <li>
+          <span>Resouce</span>
+        </li>
+        <li class="code">
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="POST https://api.att.com/v3/speech/speechToText">copy</span>
+
+            <pre>POST https://api.att.com/v3/speech/speechToText
+            </pre>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="resources-speech-to-text-custom-required-parameters" class="level-3">
+      <header>Required Parameters</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+    <section id="resources-speech-to-text-custom-optional-parameters" class="level-3">
+      <header>Optional Parameters</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+    <section id="resources-speech-to-text-custom-examples" class="level-3">
+      <header>Examples</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+    <section id="resources-speech-to-text-custom-error-codes" class="level-3">
+      <header>Error Codes</header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia porta tortor id fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nec nisl massa, sit amet dignissim dui. Pellentesque sed elit vitae risus pellentesque consequat in at mauris.
+      </p>
+    </section>
+  </section>
+</section>
+
+          <section id="quickstart" class="level-1">
+  <header>4. Quickstart</header>
+
+  <div class="tabs">
+    <ul class="tab_nav">
+      <li>
+        <a href="http://developer.att.citrusbyte.com/api/speech/docs#curl" class="selected"><abbr>cURL</abbr></a>
+      </li>
+      <li>
+        <a href="http://developer.att.citrusbyte.com/api/speech/docs#java">Java</a>
+      </li>
+      <li>
+        <a href="http://developer.att.citrusbyte.com/api/speech/docs#ruby">Ruby</a>
+      </li>
+      <li>
+        <a href="http://developer.att.citrusbyte.com/api/speech/docs#php">PHP</a>
+      </li>
+    </ul>
+    
+    <div id="curl">
+      <section id="get-started-text-to-speech" class="level-2">
+        <header>Text To Speech</header>
+        
+        
+        <div class="code">
+          <h1 class="code-caption">Get Access Token via OAuth for TTS:</h1>
+          Make sure to replace {{KEY}} and {{SECRET}} with your key and secret.
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="curl &quot;https://api.att.com/oauth/token&quot; \
+              --insecure \
+              --header &quot;Accept: application/x-www-form-urlencoded&quot; \
+              --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+              --data &quot;grant_type=client_credentials&amp;client_id={{KEY}}&amp;client_secret={{SECRET}}&amp;scope=TTS">copy</span>
+
+            <pre>              curl "https://api.att.com/oauth/token" \
+              --insecure \
+              --header "Accept: application/x-www-form-urlencoded" \
+              --header "Content-Type: application/x-www-form-urlencoded" \
+              --data "grant_type=client_credentials&amp;client_id={{KEY}}&amp;client_secret={{SECRET}}&amp;scope=TTS
+            </pre>
+          </div>
+          Copy the "access_token" for the next step.
+        </div>
+        
+        <div class="code">
+          <h1 class="code-caption">Convert text into speech</h1>
+          Replace {{TOKEN}} with your OAuth access token from above. You can replace "hello world!" with anything you would like to have converted and the audio file will be saved to the filename after the `-o`.
+          <div class="code-block">
+            <span class="copy-button" data-clipboard-text="curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+              --header &quot;Authorization: Bearer {{TOKEN}}&quot; \
+              --header &quot;Content-Type: text/plain&quot; \
+              --header &quot;Accept: audio/x-wav&quot; \
+              -d &#39;Hello world!&#39; \
+              -o hello-world.wav">copy</span>
+
+            <pre>              curl -XPOST https://api.att.com/speech/v3/textToSpeech \
+              --header "Authorization: Bearer {{TOKEN}}" \
+              --header "Content-Type: text/plain" \
+              --header "Accept: audio/x-wav" \
+              -d 'Hello world!' \
+              -o hello-world.wav
+            </pre>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section id="get-started-speech-to-text">
+        <header>Speech To Text</header>
+        
+        <section id="get-started-speech-to-text-line-of-code" class="level-3">
+          
+          <div class="code">
+            <h1 class="code-caption">Send Audio file for Speech To Text conversion:</h1>
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="curl &quot;https://api.att.com/rest/2/SpeechToText&quot; \
+                --insecure \
+                --request POST \
+                --header &quot;Authorization: Bearer your_oauth_access_token&quot; \
+                --header &quot;Content-type: audio/wav&quot; \
+                --header &quot;Accept: application/json&quot; \
+                --header &quot;X-SpeechContext: Generic&quot; \
+                --data-binary &quot;audio_file&quot; \
+                --proxy &quot;https://proxy.if.you.use.one.com:8080&quot;">copy</span>
+
+              <pre>                curl "https://api.att.com/rest/2/SpeechToText" \
+                --insecure \
+                --request POST \
+                --header "Authorization: Bearer your_oauth_access_token" \
+                --header "Content-type: audio/wav" \
+                --header "Accept: application/json" \
+                --header "X-SpeechContext: Generic" \
+                --data-binary "audio_file" \
+                --proxy "https://proxy.if.you.use.one.com:8080"
+              </pre>
+            </div>
+          </div>
+        </section>
+        
+        <section id="get-started-speech-to-text-run" class="level-3">
+          <header>5.2. Run</header>
+          <p>
+            Before sending an audio file, you must ensure that the following criteria are met:
+          </p>
+          <p>
+            <strong>Audio File Types:</strong>
+          </p>
+          
+          <ul>
+            <li><span>16 bit PCM WAV, single channel, 8 kHz sampling</span></li>
+            <li><span>16 bit PCM WAV, single channel, 16 kHz sampling</span></li>
+            <li><span>AMR (narrowband), 12.2 kbit/s, 8 kHz sampling</span></li>
+            <li><span>AMR-WB (wideband) 12.65 kbit/s, 16khz sampling</span></li>
+            <li><span>OGG (speex encoding), 8kHz sampling</span></li>
+            <li><span>OGG (speex encoding), 16kHz sampling</span></li>
+            <li><span>After you run the commands from the Lines of Code to send an audio file for speech-to-text conversion, then you should see JSON output that is similar to the following.</span></li>
+          </ul>
+          
+          <div class="code">
+            <h1 class="code-caption">Get Access Token via OAuth for Speech:</h1>
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="{
+                &quot;Recognition&quot;:{
+                &quot;ResponseID&quot;:&quot;response_id&quot;,
+                &quot;NBest&quot;:[
+                {
+                &quot;WordScores&quot;:[1,1],
+                &quot;Confidence&quot;:1,
+                &quot;Grade&quot;:&quot;accept&quot;,
+                &quot;ResultText&quot;:&quot;Boston Celtics.&quot;,
+                &quot;Words&quot;:[&quot;Boston&quot;,&quot;Celtics.&quot;],
+                &quot;LanguageId&quot;:&quot;en-us&quot;,
+                &quot;Hypothesis&quot;:&quot;Boston Celtics.&quot;
+                }
+                ]
+                }
+                }">copy</span>
+
+              <pre>                {
+                "Recognition":{
+                "ResponseID":"response_id",
+                "NBest":[
+                {
+                "WordScores":[1,1],
+                "Confidence":1,
+                "Grade":"accept",
+                "ResultText":"Boston Celtics.",
+                "Words":["Boston","Celtics."],
+                "LanguageId":"en-us",
+                "Hypothesis":"Boston Celtics."
+                }
+                ]
+                }
+                }
+              </pre>
+            </div>
+          </div>
+        </section>
+        <section id="get-started-speech-to-text-test" class="level-3">
+          <header>5.3. Test</header>
+          <p>
+            Before sending an audio file, you must ensure that the following criteria are met:
+          </p>
+          <ul>
+            <li><span>If the first command from the Lines of Code (Get Access Token via OAuth for Speech) is successful, then it should provide you with an OAuth access token.</span></li>
+            <li><span>After receiving the OAuth access token, insert the OAuth access token and information about your own audio file into the second command from the Lines of Code (Send Audio file for Speech to Text conversion) to send your message.</span></li>
+          </ul>
+          <p>
+            <strong>Note:</strong> Before you run the Send Audio File command, verify that the file criteria are met. If the second command is successful, then you should see JSON output that is similar to the following.
+          </p>
+          
+          <div class="code">
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="{
+                &quot;Recognition&quot;:{
+                &quot;ResponseID&quot;:&quot;response_id&quot;,
+                &quot;NBest&quot;:[
+                {
+                &quot;WordScores&quot;:[1,1],
+                &quot;Confidence&quot;:1,
+                &quot;Grade&quot;:&quot;accept&quot;,
+                &quot;ResultText&quot;:&quot;Boston Celtics.&quot;,
+                &quot;Words&quot;:[&quot;Boston&quot;,&quot;Celtics.&quot;],
+                &quot;LanguageId&quot;:&quot;en-us&quot;,
+                &quot;Hypothesis&quot;:&quot;Boston Celtics.&quot;
+                }
+                ]
+                }
+                }">copy</span>
+
+              <pre>                {
+                "Recognition":{
+                "ResponseID":"response_id",
+                "NBest":[
+                {
+                "WordScores":[1,1],
+                "Confidence":1,
+                "Grade":"accept",
+                "ResultText":"Boston Celtics.",
+                "Words":["Boston","Celtics."],
+                "LanguageId":"en-us",
+                "Hypothesis":"Boston Celtics."
+                }
+                ]
+                }
+                }
+              </pre>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+    <div id="java">
+      <section id="get-started-speech-to-text" class="level-2">
+        <header>Speech to Text</header>
+        
+        <section id="get-started-speech-to-text-run" class="level-3">
+          <header>5.2. Run</header>
+          <p>
+            Before sending an audio file, you must ensure that the following criteria are met:
+          </p>
+          <p>
+            <strong>Audio File Types:</strong>
+          </p>
+          
+          <ul>
+            <li><span>16 bit PCM WAV, single channel, 8 kHz sampling</span></li>
+            <li><span>16 bit PCM WAV, single channel, 16 kHz sampling</span></li>
+            <li><span>AMR (narrowband), 12.2 kbit/s, 8 kHz sampling</span></li>
+            <li><span>AMR-WB (wideband) 12.65 kbit/s, 16khz sampling</span></li>
+            <li><span>OGG (speex encoding), 8kHz sampling</span></li>
+            <li><span>OGG (speex encoding), 16kHz sampling</span></li>
+            <li><span>After you run the commands from the Lines of Code to send an audio file for speech-to-text conversion, then you should see JSON output that is similar to the following.</span></li>
+          </ul>
+          
+          <div class="code">
+            <h1 class="code-caption">Get Access Token via OAuth for Speech:</h1>
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="{
+                &quot;Recognition&quot;:{
+                &quot;ResponseID&quot;:&quot;response_id&quot;,
+                &quot;NBest&quot;:[
+                {
+                &quot;WordScores&quot;:[1,1],
+                &quot;Confidence&quot;:1,
+                &quot;Grade&quot;:&quot;accept&quot;,
+                &quot;ResultText&quot;:&quot;Boston Celtics.&quot;,
+                &quot;Words&quot;:[&quot;Boston&quot;,&quot;Celtics.&quot;],
+                &quot;LanguageId&quot;:&quot;en-us&quot;,
+                &quot;Hypothesis&quot;:&quot;Boston Celtics.&quot;
+                }
+                ]
+                }">copy</span>
+
+              <pre>                {
+                "Recognition":{
+                "ResponseID":"response_id",
+                "NBest":[
+                {
+                "WordScores":[1,1],
+                "Confidence":1,
+                "Grade":"accept",
+                "ResultText":"Boston Celtics.",
+                "Words":["Boston","Celtics."],
+                "LanguageId":"en-us",
+                "Hypothesis":"Boston Celtics."
+                }
+                ]
+                }
+              </pre>
+            </div>
+          </div>
+        </section>
+        <section id="get-started-speech-to-text-test" class="level-3">
+          <header>5.3. Test</header>
+          <p>
+            Before sending an audio file, you must ensure that the following criteria are met:
+          </p>
+          <ul>
+            <li><span>If the first command from the Lines of Code (Get Access Token via OAuth for Speech) is successful, then it should provide you with an OAuth access token.</span></li>
+            <li><span>After receiving the OAuth access token, insert the OAuth access token and information about your own audio file into the second command from the Lines of Code (Send Audio file for Speech to Text conversion) to send your message.</span></li>
+          </ul>
+          <p>
+            <strong>Note:</strong> Before you run the Send Audio File command, verify that the file criteria are met. If the second command is successful, then you should see JSON output that is similar to the following.
+          </p>
+          
+          <div class="code">
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="{
+                &quot;Recognition&quot;:{
+                &quot;ResponseID&quot;:&quot;response_id&quot;,
+                &quot;NBest&quot;:[
+                {
+                &quot;WordScores&quot;:[1,1],
+                &quot;Confidence&quot;:1,
+                &quot;Grade&quot;:&quot;accept&quot;,
+                &quot;ResultText&quot;:&quot;Boston Celtics.&quot;,
+                &quot;Words&quot;:[&quot;Boston&quot;,&quot;Celtics.&quot;],
+                &quot;LanguageId&quot;:&quot;en-us&quot;,
+                &quot;Hypothesis&quot;:&quot;Boston Celtics.&quot;
+                }
+                ]
+                }
+                }">copy</span>
+
+              <pre>                {
+                "Recognition":{
+                "ResponseID":"response_id",
+                "NBest":[
+                {
+                "WordScores":[1,1],
+                "Confidence":1,
+                "Grade":"accept",
+                "ResultText":"Boston Celtics.",
+                "Words":["Boston","Celtics."],
+                "LanguageId":"en-us",
+                "Hypothesis":"Boston Celtics."
+                }
+                ]
+                }
+                }
+              </pre>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+    <div id="ruby">
+      <section id="get-started-speech-to-text" class="level-2">
+        <header>Speech to Text</header>
+        
+        <section id="get-started-speech-to-text-test" class="level-3">
+          <header>5.3. Test</header>
+          <p>
+            Before sending an audio file, you must ensure that the following criteria are met:
+          </p>
+          <ul>
+            <li><span>If the first command from the Lines of Code (Get Access Token via OAuth for Speech) is successful, then it should provide you with an OAuth access token.</span></li>
+            <li><span>After receiving the OAuth access token, insert the OAuth access token and information about your own audio file into the second command from the Lines of Code (Send Audio file for Speech to Text conversion) to send your message.</span></li>
+          </ul>
+          <p>
+            <strong>Note:</strong> Before you run the Send Audio File command, verify that the file criteria are met. If the second command is successful, then you should see JSON output that is similar to the following.
+          </p>
+          
+          <div class="code">
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="{
+                &quot;Recognition&quot;:{
+                &quot;ResponseID&quot;:&quot;response_id&quot;,
+                &quot;NBest&quot;:[
+                {
+                &quot;WordScores&quot;:[1,1],
+                &quot;Confidence&quot;:1,
+                &quot;Grade&quot;:&quot;accept&quot;,
+                &quot;ResultText&quot;:&quot;Boston Celtics.&quot;,
+                &quot;Words&quot;:[&quot;Boston&quot;,&quot;Celtics.&quot;],
+                &quot;LanguageId&quot;:&quot;en-us&quot;,
+                &quot;Hypothesis&quot;:&quot;Boston Celtics.&quot;
+                }
+                ]
+                }
+                }">copy</span>
+
+              <pre>                {
+                "Recognition":{
+                "ResponseID":"response_id",
+                "NBest":[
+                {
+                "WordScores":[1,1],
+                "Confidence":1,
+                "Grade":"accept",
+                "ResultText":"Boston Celtics.",
+                "Words":["Boston","Celtics."],
+                "LanguageId":"en-us",
+                "Hypothesis":"Boston Celtics."
+                }
+                ]
+                }
+                }
+              </pre>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+    <div id="php">
+      <section id="get-started-speech-to-text" class="level-2">
+        <header>Speech to Text</header>
+        
+        <section id="get-started-speech-to-text-line-of-code" class="level-3">
+          <header>5.1. Line of code</header>
+          <p>An OAuth access token is required for all requests for all of the AT&amp;T APIs. You must retrieve an App Key and App Secret in order to authenticate using OAuth and request an OAuth access token.</p><p>
+            
+          </p><p>To get your API Key, App Secret and Short Code, go to your My Apps page.</p>
+          
+          <div class="code">
+            <h1 class="code-caption">Get Access Token via OAuth for Speech:</h1>
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="curl “https://api.att.com/oauth/token&quot; \
+                --insecure \
+                --header &quot;Accept: application/x-www-form-urlencoded&quot; \
+                --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+                --data &quot;client_id=YOUR_APP_KEY&amp;client_secret=YOUR_APP_SECRET&amp;grant_type=client_credentials&amp;scope=SPEECH&quot; \
+                --proxy &quot;https://proxy.if.you.use.one.com:8080&quot;">copy</span>
+
+              <pre>                curl “https://api.att.com/oauth/token" \
+                --insecure \
+                --header "Accept: application/x-www-form-urlencoded" \
+                --header "Content-Type: application/x-www-form-urlencoded" \
+                --data "client_id=YOUR_APP_KEY&amp;client_secret=YOUR_APP_SECRET&amp;grant_type=client_credentials&amp;scope=SPEECH" \
+                --proxy "https://proxy.if.you.use.one.com:8080"
+              </pre>
+            </div>
+          </div>
+          
+          <div class="code">
+            <h1 class="code-caption">Send Audio file for Speech To Text conversion:</h1>
+            <div class="code-block">
+              <span class="copy-button" data-clipboard-text="curl &quot;https://api.att.com/rest/2/SpeechToText&quot; \
+                --insecure \
+                --request POST \
+                --header &quot;Authorization: Bearer your_oauth_access_token&quot; \
+                --header &quot;Content-type: audio/wav&quot; \
+                --header &quot;Accept: application/json&quot; \
+                --header &quot;X-SpeechContext: Generic&quot; \
+                --data-binary &quot;audio_file&quot; \
+                --proxy &quot;https://proxy.if.you.use.one.com:8080&quot;">copy</span>
+
+              <pre>                curl "https://api.att.com/rest/2/SpeechToText" \
+                --insecure \
+                --request POST \
+                --header "Authorization: Bearer your_oauth_access_token" \
+                --header "Content-type: audio/wav" \
+                --header "Accept: application/json" \
+                --header "X-SpeechContext: Generic" \
+                --data-binary "audio_file" \
+                --proxy "https://proxy.if.you.use.one.com:8080"
+              </pre>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+</section>
+
+          <section id="sample-apps" class="level-1">
+  <header>5. Sample Apps</header>
+
+  <table class="sample-apps table">
+    <caption>
+      Environment
+      <div class="fancy-select"><select>
+        <option>RESTful</option>
+      </select><span class="cover"><span class="text">RESTful</span></span><span class="arrow form-icon"></span></div>
+    </caption>
+    <tbody><tr>
+      <td class="item">Speech to Text</td>
+      <td class="links">
+        <a href="http://developer.att.com/developer/forward.jsp?passedItemId=13200130&parentItemId=13100238" class="live-demo">Live Demo</a>
+        <a href="https://gist.github.com/t2-support-gists/3036563" class="view-on-github">View it on Github</a>
+        <a href="https://gist.github.com/t2-support-gists/3036563/download" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Text to Speech</td>
+      <td class="links">
+        <a href="http://developer.att.com/developer/forward.jsp?passedItemId=13401142&parentItemId=13100238" class="live-demo">Live Demo</a>
+        <a href="https://gist.github.com/t2-support-gists/5189881" class="view-on-github">View it on Github</a>
+        <a href="https://gist.github.com/t2-support-gists/5189881/download" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Speech to Text Custom</td>
+      <td class="links">
+        <a href="http://developer.att.com/developer/forward.jsp?passedItemId=13401116&parentItemId=13100238" class="live-demo">Live Demo</a>
+        <a href="https://gist.github.com/t2-support-gists/5189859" class="view-on-github">View it on Github</a>
+        <a href="https://gist.github.com/t2-support-gists/5189859/download" class="download">Download</a>
+      </td>
+    </tr>
+  </tbody></table>
+</section>
+
+          <section id="tutorials" class="level-1">
+  <header>6. Video Tutorials</header>
+
+  <article class="video-tutorial">
+    <img class="play-tutorial-video" alt="Tutorial video" src="./Speech API Documentation   AT&T Developer_files/video1.png" data-at2x="/images/hi-res/video-tutorials/video1.png" width="187">
+    
+    <div class="tutorial-video">
+      <iframe class="player" width="560" height="285" src="./Speech API Documentation   AT&T Developer_files/hdCpXLQNY3w.html" frameborder="0" allowfullscreen=""></iframe>
+      <div class="button gray close-video" title="Close video"><strong>Close Video</strong></div>
+    </div>
+    
+    <header>
+      Introduction to WATSON<sup>SM</sup> Speech Engine
+      <span>Part 1</span>
+    </header>
+    <p>In Part 1 of this tutorial, we'll introduce the WATSON Speech Engine, the technology that powers our Speech API. We'll also give a preliminary overview of how to send requests to WATSON, including how to format your data and how grammars &amp; lexicons improve the accuracy of your API responses.</p>
+  </article>
+  <article class="video-tutorial">
+    <img class="play-tutorial-video" href="#" alt="Tutorial video" src="./Speech API Documentation   AT&T Developer_files/video2.png" data-at2x="/images/hi-res/video-tutorials/video2.png" width="187">
+    
+    <div class="tutorial-video">
+      <iframe class="player" width="560" height="285" src="./Speech API Documentation   AT&T Developer_files/TDwC7oGPZ2k.html" frameborder="0" allowfullscreen=""></iframe>
+      <div class="button gray close-video" title="Close video"><strong>Close Video</strong></div>
+    </div>
+    
+    <header>
+      Customizing your API Requests for Better Accuracy
+      <span>Part 2</span>
+    </header>
+    <p>In Part 2 of this tutorial, we review the 4 ways you can customize your speech recognition instructions to WATSON to achieve more accurate, faster responses. You'll learn the basics of how to define phrases to recognize, as well as how to specify alternative phrases &amp; optional lexicons.</p>
+  </article>
+  <article class="video-tutorial">
+    <img class="play-tutorial-video" href="#" alt="Tutorial video" src="./Speech API Documentation   AT&T Developer_files/video3.png" data-at2x="/images/hi-res/video-tutorials/video3.png" width="187">
+    
+    <div class="tutorial-video">
+      <iframe class="player" width="560" height="285" src="./Speech API Documentation   AT&T Developer_files/P22uudokNIg.html" frameborder="0" allowfullscreen=""></iframe>
+      <div class="button gray close-video" title="Close video"><strong>Close Video</strong></div>
+    </div>
+    
+    <header>
+      Creating rules using a Context-Free Grammar (CFG)
+      <span>Part 3</span>
+    </header>
+    <p>In Part 3 of this tutorial, we walk you through a real example of how to set speech recognition rules for your API request for specific phrases using context-free grammars (CFGs). You'll learn how to write SRGS-formatted inline content, as well as how to record audio files.</p>
+  </article>
+  <article class="video-tutorial">
+    
+    <img class="play-tutorial-video" href="#" alt="Tutorial video" src="./Speech API Documentation   AT&T Developer_files/video4.png" data-at2x="/images/hi-res/video-tutorials/video4.png" width="187">
+    
+    <div class="tutorial-video">
+      <iframe class="player" width="560" height="285" src="./Speech API Documentation   AT&T Developer_files/J_s4sMZXszU.html" frameborder="0" allowfullscreen=""></iframe>
+      <div class="button gray close-video" title="Close video"><strong>Close Video</strong></div>
+    </div>
+    
+    <header>
+      Assembling &amp; Sending a Multi-Part Message Using cURL
+      <span>Part 4</span>
+    </header>
+    <p>In the final part of this tutorial, we show you how to assemble a multi-part message to send to WATSON using cURL commands. We'll show you how accurate the APIs’ results can be even with minimal specifications, as well as how to increase accuracy using Lexicon hints.</p>
+  </article>
+</section>
+
+          <section id="sdks-and-plugins" class="level-1">
+  <header>7. SDKs &amp; Plugins</header>
+
+  <table class="sdk-table table">
+    <tbody><tr>
+      <td class="item">HTML 5 SDK</td>
+      <td class="links">
+        <a href="https://lprod.code-api-att.com/HTML5SDK/PROD/docs/index.html#!/guide" target="_blank" class="documentation">Documentation</a>
+        <a href="https://lprod.code-api-att.com/HTML5SDK/PROD/Releases/HTML5SDK-R02.03-201305302153.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Microsoft SDK</td>
+      <td class="links">
+        <a href="https://wprod.code-api-att.com/MSSDK/PROD/docs/index.html" class="documentation" target="_blank">Documentation</a>
+        <a href="https://wprod.code-api-att.com/MSSDK/PROD/Releases/MSSDK-R02.03.02-Build-201305311005.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">iOS SDK</td>
+      <td class="links">
+        <a href="http://developer.att.com/home/api/sdk_tools/ATT_Ads_SpeechSDK_iOS_2_3_2.pdf" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/iOS_SDK.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Android SDK</td>
+      <td class="links">
+        <a href="http://developer.att.com/home/api/sdk_tools/ATT_Ads_SpeechSDK_Android_2_3_2.pdf" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/Android_SDK.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">PhoneGap</td>
+      <td class="links">
+        <a href="https://github.com/attdevsupport/ATT_APIPlatform_PhoneGap" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/ATTPlugin_PhoneGap.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Appcelerator <span>(Does not include Text to Speech)</span></td>
+      <td class="links">
+        <a href="https://github.com/attdevsupport/ATT_APIPlatform_Appcelerator_Titanium" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/ATTModule_AppcTitanium.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Windows SDK <span>(Does not include Text to Speech)</span></td>
+      <td class="links">
+        <a href="https://github.com/attdevsupport/ATT_APIPlatform_MS_W8_SDK" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/ATTSDK_MSVS.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">Salesforce <span>(Does not include Text to Speech)</span></td>
+      <td class="links">
+        <a href="https://github.com/attdevsupport/ATT_APIPlatform_Force_com_Toolkit" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/ATTToolkit_Salesforce.zip" class="download">Download</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="item">IBM Worklight</td>
+      <td class="links">
+        <a href="https://github.com/attdevsupport/ATT_APIPlatform_Worklight" target="_blank" class="documentation">Documentation</a>
+        <a href="http://developer.att.com/home/api/sdk_tools/ATTAdapter_IBMWorklight.zip" class="download">Download</a>
+      </td>
+    </tr>
+  </tbody></table>
+</section>
+
+          <section id="faqs" class="level-1">
+  <header>8. FAQs</header>
+
+  <p>
+    We've compiled answers to the most frequently asked questions about AT&amp;T's Speech API below.
+    <br>
+    <strong>Have questions that are not API specific?</strong> <a href="http://developer.att.citrusbyte.com/faq">Visit our full FAQs page</a>.
+  </p>
+  <article class="faq">
+    <header>8.1. Do I need to develop my own UI for capturing speech?</header>
+    <p>We can help jumpstart your application development process with native <a href="http://developer.att.citrusbyte.com/api/speech/docs#sdks-and-plugins" title="Go to the SDK section">SDKs</a> for multiple mobile platforms.  These <a href="http://developer.att.citrusbyte.com/api/speech/docs#sdks-and-plugins" title="Go to the SDK section">SDKs</a> will offer guidance on developing a UI for a thin client to be embedded in smartphone applications for capturing your end users' speech. We also offer Sencha and Microsoft web services SDKs. You also have the option to build your own UI, and use the speech enabler on any operating system, including web applications.</p>
+  </article>
+  <article class="faq">
+    <header>8.2. What functionality does the Speech API provide?</header>
+    <p><strong>There are three classes of functionality in the Speech API family:</strong></p>
+    <ul>
+      <li><span>Speech to Text — 9 contexts are optimized to return the text of what your end users say. The text can be returned in multiple formats, including, JSON and XML.</span></li>
+      <li><span>Text to Speech — Male and female 'characters' are available for both English and Spanish.</span></li>
+      <li><span>Speech to Text Custom — allows you to customize the speech service by sending a list of words or phrases commonly spoken by your end users to improve recognition of those unique words</span></li>
+    </ul>
+  </article>
+  <article class="faq">
+    <header>8.3. Do you support languages other than English?</header>
+    <p><strong>Yes, here are the languages we currently support in our Speech API family:</strong></p>
+    <ul>
+      <li><span>Speech to Text — Currently, we offer automatic English/Spanish detection with the Generic speech context, and English support for our other optimized speech contexts. Other language support is on our roadmap.</span></li>
+      <li><span>Text to Speech — Male and female 'characters' are available for both English and Spanish.</span></li>
+      <li><span>Speech to Text Custom — Grammar List supports 19 languages, and Generic with Hints supports English and Spanish.</span></li>
+    </ul>
+  </article>
+</section>
+
+          <section id="error-tips" class="level-1">
+  <header>
+    9. Errors
+  </header>
+  <p>Save both time and energy with these tips for optimizing your development process and implementation of the AT&amp;T Speech API in your project:</p>
+  <article class="faq">
+    <header>UI for Capturing Speech</header>
+    <p><strong>We can help jumpstart your application development process with native and web services SDKs</strong></p>
+    <ul>
+      <li><span>Use our native SDKs to create a thin client that is embedded in SmartPhone applications for multiple mobile platforms</span></li>
+      <li><span>Use our Sencha or Microsoft SDKs to create a UI for web services / HTML5-based applications.</span></li>
+      <li><span>You can also use our Speech enabler to build your own UI on any operating system, including web applications.</span></li>
+    </ul>
+  </article>
+  <article class="faq">
+    <header>UI for Capturing Speech</header>
+    <p><strong>The following formats are supported by the AT&amp;T Speech API. More formats will be added in subsequent releases:</strong></p>
+    <ul class="condensed-list">
+      <li><span>16 bit PCM WAV, single channel, 8 kHz sampling</span></li>
+      <li><span>16 bit PCM WAV, single channel, 16 kHz sampling</span></li>
+      <li><span>16 bit PCM Raw, single channel, 8 kHz sampling</span></li>
+      <li><span>16 bit PCM Raw, single channel, 16 kHz sampling</span></li>
+      <li><span>µ-law PCM WAV, single channel, 8 kHz sampling</span></li>
+      <li><span>µ-law PCM WAV, single channel, 16 kHz sampling</span></li>
+      <li><span>µ-law PCM Raw, single channel, 8 kHz sampling</span></li>
+      <li><span>µ-law PCM Raw, single channel, 16 kHz sampling</span></li>
+      <li><span>AMR (narrowband), 12.2 kbit/s, 8 kHz sampling</span></li>
+      <li><span>AMR (wideband), 12.65 kbit/s, 16kHz sampling</span></li>
+      <li><span>OGG - speex encoding, 8kHz sampling</span></li>
+      <li><span>OGG - speex encoding, 16kHz sampling</span></li>
+      <li><span>Header-Byte - speex encoding, 8kHz sampling</span></li>
+      <li><span>Header-Byte - speex encoding, 16kHz sampling</span></li>
+    </ul>
+    <p>If your audio file is not in one of these formats, then you can try converting it to these formats by using audio conversion tools such as <a href="http://developer.att.citrusbyte.com/api/speech/docs#">Sox</a> or the <a href="http://developer.att.citrusbyte.com/api/speech/docs#">Speex</a> library for embedded applications.</p>
+    <p><strong>Note:</strong></p>
+    <ul>
+      <li><span>Although wide-band and uncompressed audio provides the best accuracy for speech recognition, various audio compression audio coders can still allow good quality speech recognition results. Among compression codecs, we have found through experiments that the speex encoder provides better quality recognition than either the u-law compander or AMR compression formats.</span></li>
+      <li><span>Using the raw audio or streaming speex data can significantly reduce user perceived latency over traditional WAV formats, which cannot be streamed.</span></li>
+    </ul>
+  </article>
+</section>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="pre-footer">
+  <div class="container">
+    <article>
+      <header>Have Questions or Need Help?</header>
+      <p>
+        Use the form or contact us at <a href="http://developer.att.citrusbyte.com/api/speech/docs#">speech.support@att.com</a>.
+        <br>
+        Our Help Center and our Forums can help you get answers to your questions fast and easy.
+      </p>
+    </article>
+    <a href="http://developer.att.citrusbyte.com/community/forums" class="button" title="Go to the forums">
+      Forums
+    </a>
+    <a href="http://developer.att.citrusbyte.com/contact" class="button" title="Contact the Sales Department">
+      Help Center
+    </a>
+  </div>
+</section>
+
+
+</div>
+
+<script src="./Speech API Documentation   AT&T Developer_files/docs.js" type="text/javascript"></script>
+
+      <div id="att-footer" class="container">
+  <div class="footer-top">
+    <div id="sitemap">
+      <section class="apis">
+        <header>APIs &amp; Tools</header>
+        <ul>
+          <li><a href="http://developer.att.citrusbyte.com/api/list">Our APIs</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/aro">AT&amp;T ARO for Android</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/sdks-plugins-and-more">SDKs, Plugins, &amp; More</a></li>
+        </ul>
+      </section>
+
+      <section class="resources">
+        <header>Additional Resources</header>
+        <ul>
+          <li><a href="http://developer.att.citrusbyte.com/technical-library">Technical Articles</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/distribute-your-app">Distribute Your App</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/device-references-and-specs">Device References and Specs</a></li>
+        </ul>
+      </section>
+
+      <section class="support">
+        <header>Support</header>
+        <ul>
+          <li><a href="http://developer.att.citrusbyte.com/contact-us">Contact Us</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/api/speech/docs#">Live Chat</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/api/speech/docs#">Submit a Ticket</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/support/faqs">FAQs</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/support/bug-bounty">Bug Bounty</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="platform">
+      <div class="status healthy">
+        <div class="icon"></div>
+
+        <p class="healthy">
+          AT&amp;T Developer Network
+          <strong>Platform is Healthy</strong>
+        </p>
+
+        <a href="http://developer.att.citrusbyte.com/api/speech/docs#" class="button gray">See Details</a>
+      </div>
+    </section>
+
+    <section class="social-media-links">
+      <ul>
+        <li class="facebook">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> Facebook</a>
+        </li>
+
+        <li class="twitter">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> Twitter</a>
+        </li>
+
+        <li class="github">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> GitHub</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="footer-bottom">
+    <a class="logo" href="http://www.att.com/" title="AT&amp;T">
+      <img class="att-logo" alt="AT&amp;T Developer" src="./Speech API Documentation   AT&T Developer_files/logo-globe.png" data-at2x="/images/hi-res/logo-globe.png" width="30">
+    </a>
+
+    <div id="links">
+      <nav>
+        <a href="http://www.att.com/gen/general?pid=11561">Terms of Use</a>
+        <a href="http://www.att.com/gen/privacy-policy?pid=2506">Privacy Policy</a>
+        <a href="http://developer.att.citrusbyte.com/contact" class="last">Contact Us</a>
+      </nav>
+
+      <p><a href="http://www.att.com/gen/privacy-policy?pid=2587">©2013 AT&amp;T Intellectual Property.</a> All rights reserved.</p>
+    </div>
+
+    <div id="trademark-notes">
+      <p>AT&amp;T, the AT&amp;T logo and all other AT&amp;T marks contained herein are trademarks of<br>AT&amp;T Intellectual Property and/or AT&amp;T affiliated companies. AT&amp;T 36USC220506</p>
+    </div>
+  </div>
+</div>
+
+      <div id="att-footer-responsive" class="container">
+  <div class="footer-top">
+
+    <a class="button big blue remove-responsive">View Full Website</a>
+
+    <div id="sitemap">
+      <section>
+        <header>Mobile Sitemap</header>
+        <ul>
+          <li><a href="http://developer.att.citrusbyte.com/api/list">Our APIs</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/aro">AT&amp;T ARO for Android</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/api/pricing">Pricing</a></li>
+          <li><a href="http://developer.att.citrusbyte.com/stories">Stories</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="social-media-links">
+      <ul>
+        <li class="facebook">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> Facebook</a>
+        </li>
+
+        <li class="twitter">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> Twitter</a>
+        </li>
+
+        <li class="github">
+          <a href="http://developer.att.citrusbyte.com/api/speech/docs#"><span class="icon"></span> GitHub</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="platform">
+    <div class="status healthy">
+      <div class="icon"></div>
+
+      <p class="healthy">
+        AT&amp;T Developer Network
+        <strong>Platform is Healthy</strong>
+      </p>
+    </div>
+  </section>
+
+  <div class="footer-bottom">
+
+    <div id="links">
+      <nav>
+        <a href="http://www.att.com/gen/general?pid=11561">Terms of Use</a>
+        <a href="http://www.att.com/gen/privacy-policy?pid=2506">Privacy Policy</a>
+        <a href="http://developer.att.citrusbyte.com/sitemap">Sitemap</a>
+        <a href="http://developer.att.citrusbyte.com/contact">Contact Us</a>
+      </nav>
+    </div>
+
+    <a class="logo" href="http://www.att.com/" title="AT&amp;T">
+      <img class="att-logo" alt="AT&amp;T Developer" src="./Speech API Documentation   AT&T Developer_files/logo-globe.png" data-at2x="/images/hi-res/logo-globe.png" width="60">
+    </a>
+
+    <div id="trademark-notes">
+      <p><a href="http://www.att.com/gen/privacy-policy?pid=2587">©2013 AT&amp;T Intellectual Property. All rights reserved.</a></p>
+      <p>AT&amp;T, the AT&amp;T logo and all other AT&amp;T marks contained herein are trademarks of<br>AT&amp;T Intellectual Property and/or AT&amp;T affiliated companies. AT&amp;T 36USC220506</p>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+  <!-- More JS
+  ================================================== -->
+  <script src="./Speech API Documentation   AT&T Developer_files/selfish.js"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/app.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/responsive.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/slideshows.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/carousel.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/search.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/fancy-select.js" type="text/javascript"></script>
+  <script src="./Speech API Documentation   AT&T Developer_files/retina.js" type="text/javascript"></script>
+
+  <!-- Hi res images CSS - We load hi res sprites last, so it doesn't block everything else.
+  ================================================== -->
+    <link rel="stylesheet" href="http://developer.att.citrusbyte.com/css/hi-res.css">
+
+    <!-- Implement CrazyEgg
+    ================================================== -->
+    <script type="text/javascript">
+      setTimeout(function(){var a=document.createElement("script");
+      var b=document.getElementsByTagName("script")[0];
+      a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/4039.js?"+Math.floor(new Date().getTime()/3600000);
+      a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+
+    <!-- Implement Google Analytics
+    ================================================== -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41325383-1', 'citrusbyte.com');
+      ga('send', 'pageview');
+    </script>
+  
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" data-clipboard-ready="true" style="position: absolute; left: -9999px; top: -9999px; width: 15px; height: 15px; z-index: 9999;">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="/ZeroClipboard.swf?nocache=1382991824943">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="">         <embed src="/ZeroClipboard.swf?nocache=1382991824943" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="" scale="exactfit">                </object></div></body></html>

@@ -1,0 +1,16 @@
+.api-docs #document-area #api-docs-content .main .level-1:before,
+.api-docs #document-area #api-docs-content .main .level-2:before {
+    display:block;
+    content:" ";
+    margin-top:-168px;
+    height:168px;
+    visibility:hidden;
+}
+
+.api-docs #document-area #api-docs-content .main .level-1,
+.api-docs #document-area #api-docs-content .main .level-2 {
+    padding-top:168px;
+    margin-top:-168px;
+    -webkit-background-clip:content-box;
+    background-clip:content-box;
+}

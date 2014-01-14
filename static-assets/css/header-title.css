@@ -1,0 +1,102 @@
+.sub-header {
+    background: url("data:image/gif;base64,R0lGODlhAQACAKIAAAAAAP////Pz8+3t7f///wAAAAAAAAAAACH5BAEAAAQALAAAAAABAAIAAAMCOJIAOw==") repeat-x scroll 0 0 #F6F6F6;
+    border-bottom: 1px solid #EAEAEA;
+    border-top: 1px solid #DADADA;
+    color: #666666;
+}
+.sub-header:before, .sub-header:after {
+    content: "";
+    display: table;
+}
+.sub-header:after {
+    clear: both;
+}
+.sub-header h1 {
+    color: #666666;
+    display: inline-block;
+    font-family: omnes_att_regularregular,'helvetica neue',helvetica,sans-serif;
+    font-size: 25px;
+    height: 90px;
+    line-height: 90px;
+    margin: 0;
+    max-width: 550px;
+    position: relative;
+    vertical-align: middle;
+}
+.sub-header h1 em {
+    font-family: omnes_attregular_italic,'helvetica neue',helvetica,sans-serif;
+}
+.sub-header h1 a {
+    color: #666666;
+}
+.sub-header h1 strong {
+    font-family: clearviewattregular,'helvetica neue',helvetica,sans-serif;
+}
+.sub-header h1 strong em {
+    font-family: clearviewattitalic,'helvetica neue',helvetica,sans-serif;
+}
+.sub-header .api-icon {
+    display: inline-block;
+    margin: -5px 10px 0 0;
+    text-indent: -9999px;
+    vertical-align: middle;
+    z-index: 1;
+}
+.sub-header span {
+    float: right;
+    line-height: 90px;
+}
+.sub-header nav {
+    float: right;
+}
+.sub-header nav ul {
+    border-right: 1px solid #EAEAEA;
+}
+.sub-header nav ul:before, .sub-header nav ul:after {
+    content: "";
+    display: table;
+}
+.sub-header nav ul:after {
+    clear: both;
+}
+.sub-header nav ul li {
+    float: left;
+    margin: 0;
+}
+.sub-header nav ul li a {
+    border-left: 1px solid #EAEAEA;
+    color: #6A6A6A;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 39px 30px 33px;
+    text-align: center;
+}
+.sub-header nav ul li:hover a, .sub-header nav ul li.active a {
+    color: #333333;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.sub-header nav ul li.active a {
+    color: #FF7200;
+}
+.sub-header .container {
+    padding: 0;
+}
+.sub-header header {
+    color: #666666 !important;
+    display: inline-block;
+    font-family: omnes_att_regularregular,'helvetica neue',helvetica,sans-serif;
+    font-size: 25px;
+    height: 90px;
+    line-height: 90px;
+    margin: 0;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.sub-header header a {
+    color: #666666 !important;
+}

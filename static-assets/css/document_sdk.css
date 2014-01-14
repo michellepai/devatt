@@ -1,0 +1,259 @@
+section.with-shadow{
+	background-image: linear-gradient(#fff,#fff 70%,#f6f6f6);
+	box-shadow: inset -300px 0 150px rgba(255,255,255,0.9),inset 0 -1px 0 #eaeaea;
+}
+
+section.category{
+	background: none repeat scroll 0px center transparent;
+	border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.main.category,
+.main.category table tr:first-child{
+    color: rgb(69, 73, 77);
+    font-family: clearviewatt_ltbold,'helvetica neue',helvetica,sans-serif;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.main.category table tr:first-child td span{
+	font-weight: normal;
+	color: rgb(69, 73, 77);
+}
+.content-html-block .main>div>table td:first-child,
+.content-html-block .main>div>table td:nth-child(3){
+	text-align: left;
+}
+
+.content-html-block .main{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+/* Filter select */
+div.filter-select{
+    width: 400px; 
+    padding: 20px;
+}
+
+div.filter-select > div{
+    height: 38px;
+}
+div.filter-select span{
+    height: inherit;
+    display: inline-block;
+    line-height: 38px;/* align vertically */
+    font-size: 17px;
+}
+div.filter-select select{
+    height: inherit;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.api-docs p, .api-docs span,
+ul.small li span{
+	font-size: 17px !important;
+    color: rgb(69, 69, 69);
+    font-weight: 200;
+}
+
+span.subheader{
+	font-size: 25px;
+}
+
+.sub-header h1{
+	max-width: 100%
+}
+
+.api-docs ul.small span{
+	font-size: 14px !important;
+}
+
+h5{
+	font-family: 'helvetica neue',helvetica,arial,sans-serif !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.api-docs #document-area .main, .api-docs #document-area #api-docs-content .main{
+	border-left: 0px solid #ececec;
+	box-shadow: 0px 0 0px #f4f4f4;
+	padding: 0 !important;
+    margin: 20px !important;
+	box-shadow: 0px -4px 14px 13px rgb(244, 244, 244) !important;
+}
+
+.api-docs #document-area #api-docs-content .main .level-1, .api-docs #document-area #api-docs-content .main .level-2 {
+    background-clip: content-box;
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    /*border: 1px solid black; TODO: remove */
+}
+
+section.level-2 header{
+	border: 0 none;
+	color: #0679b3;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 1.53em;
+	font-weight: bold;
+	margin-top: 15px;
+	padding: 0;
+	width: 690px;
+	margin-left: 10px !important;
+	margin-bottom: 15px !important;
+}
+
+.api-docs #document-area #api-docs-content .main .level-1 header {
+	margin-left: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+.api-docs #document-area #api-docs-content .main ul.small,
+ul.small{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: inherit !important;
+}
+
+ul li span{
+	color: rgb(0,0,0);
+}
+
+ul li {
+	border-top: 1px solid rgb(234, 234, 234);
+	color: rgb(0, 0, 0);
+	font-family: 'helvetica neue',helvetica,arial,sans-serif;
+	margin: 0px;
+	padding: 6px 0px;
+    //list-style: disc;
+}
+
+.api-docs #document-area #api-docs-content .main .level-1 p {
+	margin: 10px !important;
+}
+
+.sdk-summary-container .button.gray,
+.button.gray{
+	height: 36px;
+}
+
+.api-docs #document-area #api-docs-content .code .code-caption {
+
+	margin-left: 20px !important;
+}
+
+.api-docs #document-area #api-docs-content .main pre {
+	margin-left: 25px !important;
+	margin-right: 25px !important;
+}
+.more-info{
+	float: right;
+    margin-right: 20px;
+}
+
+.sdk-summary-container ul li a{
+	font-family: 'helvetica neue',helvetica,arial,sans-serif;
+	font-size: 17px;
+	font-weight: 200;
+	line-height: 26px;
+}
+
+.sdk-summary-container ul li a:hover, a:hover{
+    color: #3381b7;
+
+}
+
+.sdk-summary-container ul{
+    margin-left: 20px;
+    list-style: none;
+}
+
+.sdk-summary-container ul li{
+    list-style: discs
+}
+
+/*.sdk-summary-container ul li:before{
+    content: "• ";
+    color: #3381b7;
+}*/
+
+div.sdk-summary-container{
+	padding-left: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 100px;
+}
+
+/*########## Tables ###############*/
+
+table {
+	text-align: center;
+}
+
+#callbacks table, 
+#methods table,
+#ads-methods table{
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#callbacks table th, 
+#methods table th,
+#ads-methods table th{
+	text-align: center;	
+}
+
+#callbacks table td, 
+#methods table td,
+#ads-methods table td{
+	padding-left: 10px;
+    padding-right: 10px;
+	text-align: justify;
+}
+
+
+#callbacks table td:first-child,
+#callbacks table td:nth-child(2),
+#methods table td:first-child,
+#ads-methods table td:first-child,
+#ads-methods  table td:nth-child(2){
+	font-family: "Courier New",Courier,monospace;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#callbacks table td:first-child, 
+#methods table td:first-child,
+#ads-methods table td:first-child{
+    width: 30%;
+}
+
+#callbacks table td:last-child, 
+#methods table td:last-child,
+#ads-methods table td:last-child{
+	width: 55%;
+}
+
+
+#callbacks table .header, 
+#methods table .header,
+#ads-methods table .header{
+	font-weight: bold;
+	text-align: left;
+	color: rgb(102, 102, 102);
+	font-size: 1.15em;
+}
+
+.main .sidr .left>div{
+	margin-right: 20px !important;
+	margin-left: 0px !important;
+} 
+
+.main .sidr .left>div{
+	float: right !important;
+	margin-right: 20px !important;
+}
